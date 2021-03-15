@@ -1,4 +1,4 @@
-Drawing Rectangles
+Drawing rectangles
 ==================
 This example is implemented in TypeScript.
 To get started, we'll first want to import d3 and SODA.
