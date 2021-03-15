@@ -1,0 +1,38 @@
+Classes
+=======
+
+.. toctree::
+   :maxdepth: 2
+
+   classes/Annotation
+   classes/AnnotationGroup
+   classes/BedAnnotation
+   classes/Gff3Annotation
+   classes/PlotAnnotation
+   classes/PointDatum
+   classes/SequenceAnnotation
+   classes/AxisChart
+   classes/BarChart
+   classes/ChartBase
+   classes/HeatmapChart
+   classes/LineChart
+   classes/TrackChart
+   classes/ChevronZoomBehavior
+   classes/ForwardChevronZoomBehavior
+   classes/PatternSwitchZoomBehavior
+   classes/ReverseChevronZoomBehavior
+   classes/LineZoomBehavior
+   classes/VerticalAxisZoomBehavior
+   classes/BarPlotZoomBehavior
+   classes/HeatmapZoomBehavior
+   classes/LinePlotZoomBehavior
+   classes/RectZoomBehavior
+   classes/SequenceCharacterZoomBehavior
+   classes/SequenceZoomBehavior
+   classes/TextZoomBehavior
+   classes/AnnotationGraph
+   classes/QueryController
+   classes/ResizeController
+   classes/RuleController
+   classes/TrackRack
+   classes/ZoomController

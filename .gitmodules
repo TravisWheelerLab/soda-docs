@@ -1,0 +1,3 @@
+[submodule "soda"]
+	path = soda
+	url = git@github.com:TravisWheelerLab/soda.git
