@@ -1,3 +1,41 @@
 Click and hover behaviors
 =========================
+This example showcases click and hover behaviors in SODA.
+We'll start off with the code from the :ref:`drawing-rectangles<drawing rectangles>` example.
 
+.. literalinclude:: ../_static/code-examples/click-and-hover/click-and-hover-2.ts
+    :language: typescript
+
+Hover behaviors are defined with a :ref:`HoverConfig`, which simply holds two callback functions: one that's called when the mouse moves over a glyph and one that's called when the mouse moves off of the glyph.
+Once the HoverConfig has been created, simply pass it as an argument along with a list of Annotations to apply the behavior.
+Here, we just supply a couple callbacks that print when the rectangles are hovered.
+Open your developer console (f12 on most browsers) to check it out.
+
+.. literalinclude:: ../_static/code-examples/click-and-hover/click-and-hover-3.ts
+    :language: typescript
+
+.. raw:: html
+    :file: ../_static/example-builds/click-and-hover/index.html
+
+SODA also provides a function that adds tooltips to glyphs.
+A :ref:`TooltipConfig` at a minimum needs a callback function to define the tooltip text from the Annotation object that the glyph represents.
+The TooltipConfig has optional styling parameters.
+
+.. literalinclude:: ../_static/code-examples/click-and-hover/click-and-hover-4.ts
+    :language: typescript
+
+.. raw:: html
+    :file: ../_static/example-builds/click-and-hover-2/index.html
+
+Click behaviors can similarly be defined with a :ref:`ClickConfig`.
+
+.. literalinclude:: ../_static/code-examples/click-and-hover/click-and-hover-5.ts
+    :language: typescript
+
+.. raw:: html
+    :file: ../_static/example-builds/click-and-hover-3/index.html
+
+The full code:
+
+.. literalinclude:: ../_static/code-examples/click-and-hover/click-and-hover.ts
+    :language: typescript

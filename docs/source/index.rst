@@ -5,5 +5,5 @@ Welcome to SODA's documentation!
    :maxdepth: 2
 
    examples/rectangles
-   examples/glyphs
+   examples/click-and-hover
    api

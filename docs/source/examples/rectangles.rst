@@ -1,6 +1,7 @@
+.. _drawing-rectangles:
+
 Drawing rectangles
 ==================
-This example is implemented in TypeScript.
 To get started, we'll first want to import d3 and SODA.
 
 .. literalinclude:: ../_static/code-examples/rectangles/rectangles-1.ts
@@ -71,5 +72,5 @@ Finally, we'll make a single call to the :ref:`rectangleGlyph` function, which w
 
 The full code:
 
-.. literalinclude:: ../_static/code-examples/rectangles/main.ts
+.. literalinclude:: ../_static/code-examples/rectangles/rectangles.ts
     :language: typescript
