@@ -9,23 +9,48 @@
 .. role:: trst-type
 .. role:: trst-type-parameter
 
-.. _BedAnnotationConfig:
+.. _BedRecord:
 
-:trst-interface:`BedAnnotationConfig`
-=====================================
-
-:**Extends**:
- .. rst-class:: trst-extends
-
-  :ref:`AnnotationConfig<AnnotationConfig>`
+:trst-interface:`BedRecord`
+===========================
 
 Properties
 ----------
 
 ----
 
-:trst-property:`id`
-+++++++++++++++++++
+:trst-property:`blockCount`
++++++++++++++++++++++++++++
+
+.. rst-class:: trst-property-dl
+
+:Type:
+ .. rst-class:: trst-type
+
+  number
+
+:trst-property:`blockSizes`
++++++++++++++++++++++++++++
+
+.. rst-class:: trst-property-dl
+
+:Type:
+ .. rst-class:: trst-type
+
+  number []
+
+:trst-property:`blockStarts`
+++++++++++++++++++++++++++++
+
+.. rst-class:: trst-property-dl
+
+:Type:
+ .. rst-class:: trst-type
+
+  number []
+
+:trst-property:`chrom`
+++++++++++++++++++++++
 
 .. rst-class:: trst-property-dl
 
@@ -33,6 +58,26 @@ Properties
  .. rst-class:: trst-type
 
   string
+
+:trst-property:`chromEnd`
++++++++++++++++++++++++++
+
+.. rst-class:: trst-property-dl
+
+:Type:
+ .. rst-class:: trst-type
+
+  number
+
+:trst-property:`chromStart`
++++++++++++++++++++++++++++
+
+.. rst-class:: trst-property-dl
+
+:Type:
+ .. rst-class:: trst-type
+
+  number
 
 :trst-property:`itemRgb`
 ++++++++++++++++++++++++
@@ -42,7 +87,7 @@ Properties
 :Type:
  .. rst-class:: trst-type
 
-  undefined | string
+  string
 
 :trst-property:`name`
 +++++++++++++++++++++
@@ -52,17 +97,7 @@ Properties
 :Type:
  .. rst-class:: trst-type
 
-  undefined | string
-
-:trst-property:`orientation`
-++++++++++++++++++++++++++++
-
-.. rst-class:: trst-property-dl
-
-:Type:
- .. rst-class:: trst-type
-
-  undefined | :ref:`Forward<Forward>` | :ref:`Reverse<Reverse>` | :ref:`Unknown<Unknown>` | :ref:`Unoriented<Unoriented>`
+  string
 
 :trst-property:`score`
 ++++++++++++++++++++++
@@ -72,7 +107,17 @@ Properties
 :Type:
  .. rst-class:: trst-type
 
-  undefined | number
+  number
+
+:trst-property:`strand`
++++++++++++++++++++++++
+
+.. rst-class:: trst-property-dl
+
+:Type:
+ .. rst-class:: trst-type
+
+  number
 
 :trst-property:`thickEnd`
 +++++++++++++++++++++++++
@@ -82,40 +127,10 @@ Properties
 :Type:
  .. rst-class:: trst-type
 
-  undefined | number
+  number
 
 :trst-property:`thickStart`
 +++++++++++++++++++++++++++
-
-.. rst-class:: trst-property-dl
-
-:Type:
- .. rst-class:: trst-type
-
-  undefined | number
-
-:trst-property:`w`
-++++++++++++++++++
-
-.. rst-class:: trst-property-dl
-
-:Type:
- .. rst-class:: trst-type
-
-  number
-
-:trst-property:`x`
-++++++++++++++++++
-
-.. rst-class:: trst-property-dl
-
-:Type:
- .. rst-class:: trst-type
-
-  number
-
-:trst-property:`y`
-++++++++++++++++++
 
 .. rst-class:: trst-property-dl
 

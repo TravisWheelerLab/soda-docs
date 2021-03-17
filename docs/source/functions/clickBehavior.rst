@@ -9,15 +9,15 @@
 .. role:: trst-type
 .. role:: trst-type-parameter
 
-.. _tooltip:
+.. _clickBehavior:
 
-:trst-function:`tooltip`
-========================
+:trst-function:`clickBehavior`
+==============================
 
 :Call signature:
  .. rst-class:: trst-call-signature
 
-  tooltip<A, C>(chart, ann, config): void
+  clickBehavior<A>(ann, config): void
 :Type parameters:
  :trst-type-parameter:`A`
 
@@ -28,30 +28,11 @@
    
      A extends :ref:`Annotation<Annotation>` <:ref:`A<A>`>
    
-:Type parameters:
- :trst-type-parameter:`C`
-
- .. rst-class:: trst-type-parameter-dl
-
-   :Type constraint:
-    .. rst-class:: trst-type-constraint
-   
-     C extends :ref:`Chart<Chart>` <any, :ref:`C<C>`>
-   
 :Parameters:
- :trst-parameter:`chart`
+ :trst-parameter:`ann`
 
  .. rst-class:: trst-parameter-desc
- The Chart that the glyph is rendered in.
-
- .. rst-class:: trst-parameter-dl
-
-   :Type:
-    .. rst-class:: trst-type
-   
-     :ref:`C<C>`
-   
- :trst-parameter:`ann`
+ Empty comment
 
  .. rst-class:: trst-parameter-dl
 
@@ -63,12 +44,12 @@
  :trst-parameter:`config`
 
  .. rst-class:: trst-parameter-desc
- The Annotation whose representative glyph we are binding the tooltip to. 
+  
 
  .. rst-class:: trst-parameter-dl
 
    :Type:
     .. rst-class:: trst-type
    
-     :ref:`TooltipConfig<TooltipConfig>` <:ref:`A<A>`, :ref:`C<C>`>
+     :ref:`ClickConfig<ClickConfig>` <:ref:`A<A>`>
    

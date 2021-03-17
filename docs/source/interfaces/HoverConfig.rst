@@ -33,20 +33,6 @@ Properties
 
 ----
 
-:trst-property:`ann`
-++++++++++++++++++++
-
-.. rst-class:: trst-property-desc
-
-The Annotation to which a hover behavior will be bound. 
- 
-.. rst-class:: trst-property-dl
-
-:Type:
- .. rst-class:: trst-type
-
-  :ref:`A<A>`
-
 :trst-property:`mouseout`
 +++++++++++++++++++++++++
 

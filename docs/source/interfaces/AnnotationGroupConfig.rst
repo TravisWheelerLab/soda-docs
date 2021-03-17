@@ -44,16 +44,6 @@ Properties
 
   undefined | :ref:`A<A>` []
 
-:trst-property:`h`
-++++++++++++++++++
-
-.. rst-class:: trst-property-dl
-
-:Type:
- .. rst-class:: trst-type
-
-  number
-
 :trst-property:`id`
 +++++++++++++++++++
 

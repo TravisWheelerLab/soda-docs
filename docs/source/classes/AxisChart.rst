@@ -21,13 +21,7 @@ The AxisChart is a simple chart that displays a horizontal axis with semantic co
 :**Extends**:
  .. rst-class:: trst-extends
 
-  :ref:`ChartBase<ChartBase>`
-
-**Implements**
- .. rst-class:: trst-implements
-
-  :ref:`ResizableChart<ResizableChart>`
-, :ref:`ZoomableChart<ZoomableChart>`
+  :ref:`TrackChart<TrackChart>`
 
 Constructor
 -----------
@@ -82,34 +76,6 @@ A d3 selection to the DOM elements that the axis will be rendered as. It will be
 
   undefined | :ref:`Selection<Selection>` <any, any, any, any>
 
-:trst-property:`_queryEnd`
-++++++++++++++++++++++++++
-
-.. rst-class:: trst-property-desc
-
-The end of the currently displayed query in semantic coordinates. 
- 
-.. rst-class:: trst-property-dl
-
-:Type:
- .. rst-class:: trst-type
-
-  undefined | number
-
-:trst-property:`_queryStart`
-++++++++++++++++++++++++++++
-
-.. rst-class:: trst-property-desc
-
-The start of the currently displayed query in semantic coordinates. 
- 
-.. rst-class:: trst-property-dl
-
-:Type:
- .. rst-class:: trst-type
-
-  undefined | number
-
 :trst-property:`_renderParams`
 ++++++++++++++++++++++++++++++
 
@@ -137,6 +103,20 @@ A d3 scale that the Chart will use to translate between semantic and SVG viewpor
  .. rst-class:: trst-type
 
   undefined | :ref:`ScaleLinear<ScaleLinear>` <number, number>
+
+:trst-property:`binCount`
++++++++++++++++++++++++++
+
+.. rst-class:: trst-property-desc
+
+This keeps track of the number of vertical "bins" present in this TrackChart's current visualization. 
+ 
+.. rst-class:: trst-property-dl
+
+:Type:
+ .. rst-class:: trst-type
+
+  number
 
 :trst-property:`binHeight`
 ++++++++++++++++++++++++++
@@ -180,6 +160,20 @@ A list of plugins attached to the Chart.
 
   :ref:`Plugin<Plugin>` []
 
+:trst-property:`scaleExtent`
+++++++++++++++++++++++++++++
+
+.. rst-class:: trst-property-desc
+
+A list of two numbers that define the extent to which a zoom event is allowed to transform the TrackChart's underlying scale. Simply put, this controls how far in and out a user will be able to zoom. The first number is the maximum zoom-out factor, and the second is the maximum zoom-in factor. For example, setting this to [1, 10] will prevent a user from zooming out past the point at which the chart is initially rendered, and allow them to zoom in by a factor of 10. For more info, see https://github.com/d3/d3-zoom/blob/master/README.md#zoom_scaleExtent 
+ 
+.. rst-class:: trst-property-dl
+
+:Type:
+ .. rst-class:: trst-type
+
+  None
+
 :trst-property:`selector`
 +++++++++++++++++++++++++
 
@@ -207,6 +201,20 @@ A d3 selection of the Chart's SVG viewport.
  .. rst-class:: trst-type
 
   :ref:`Selection<Selection>` <any, any, any, any>
+
+:trst-property:`translateExtent`
+++++++++++++++++++++++++++++++++
+
+.. rst-class:: trst-property-desc
+
+This is a callback function that is used to set the translate extent (left/right panning) allowed when a zoom event is applied to the TrackChart. It needs to be a callback, because it needs the absolute width of the TrackChart's SVG viewport, which is allowed to change throughout the TrackChart's lifetime. For example, setting this to: (chart) => [[0, 0], [chart.width, chart.height]] will restrict the panning in the TrackChart to exactly the range that was initially rendered. For more info, see https://github.com/d3/d3-zoom/blob/master/README.md#zoom_translateExtent 
+ 
+.. rst-class:: trst-property-dl
+
+:Type:
+ .. rst-class:: trst-type
+
+  (chart: TrackChart <any>): None
 
 :trst-property:`verticalPad`
 ++++++++++++++++++++++++++++
@@ -236,26 +244,40 @@ The width in pixels of the Chart's SVG viewport.
 
   number
 
-:trst-property:`zoomBehaviors`
-++++++++++++++++++++++++++++++
+:trst-property:`yOffset`
+++++++++++++++++++++++++
 
 .. rst-class:: trst-property-desc
 
-The list of ZoomBehaviors for the Chart. There won't actually be any ZoomBehaviors for an AxisChart, as it uses the default d3 zooming functionality. 
+This defines which bin (starting from the top) this TrackChart will start rendering in. 
  
 .. rst-class:: trst-property-dl
 
 :Type:
  .. rst-class:: trst-type
 
-  undefined | :ref:`ZoomBehavior<ZoomBehavior>` <:ref:`AxisChart<AxisChart>`, any> []
+  number
+
+:trst-property:`zoomBehaviors`
+++++++++++++++++++++++++++++++
+
+.. rst-class:: trst-property-desc
+
+The list of ZoomBehaviors that this chart will pass to the ZoomController during a zoom event. These objects define how all of the different glyphs rendered in this TrackChart will be transformed during a zoom event. 
+ 
+.. rst-class:: trst-property-dl
+
+:Type:
+ .. rst-class:: trst-type
+
+  :ref:`ZoomBehavior<ZoomBehavior>` <:ref:`TrackChart<TrackChart>` <:ref:`AxisRenderParams<AxisRenderParams>`>, any> []
 
 :trst-property:`zoomController`
 +++++++++++++++++++++++++++++++
 
 .. rst-class:: trst-property-desc
 
-The ZoomController that this chart accepts zoom events from. 
+The ZoomController that this chart accepts zoom events from. If the TrackChart has a ZoomController, it will default to using the controller's scale instead of the TrackChart's internal scale. 
  
 .. rst-class:: trst-property-dl
 
@@ -284,6 +306,21 @@ This calls each of this Chart's attached plugin's alert() method.
 
   alertPlugins(): void
 
+:trst-method:`callZoomTrigger`
+++++++++++++++++++++++++++++++
+
+.. rst-class:: trst-method-desc
+
+This is the handler method that will be called when the SVG viewport receives a browser zoom event. If there is no ZoomController defined, it will do nothing. 
+ 
+
+.. rst-class:: trst-method-field-list
+
+:Call signature:
+ .. rst-class:: trst-call-signature
+
+  callZoomTrigger(): void
+
 :trst-method:`clearAxis`
 ++++++++++++++++++++++++
 
@@ -298,6 +335,21 @@ This removes all of the SVG elements that the AxisChart has rendered.
  .. rst-class:: trst-call-signature
 
   clearAxis(): void
+
+:trst-method:`configureZoom`
+++++++++++++++++++++++++++++
+
+.. rst-class:: trst-method-desc
+
+This configures the SVG viewport to appropriately handle browser zoom events. It is called in the constructor, and in the TrackChart's resize() method. Currently, most of what this does is prevent zooming with the scroll wheel unless the ctrl key is pressed, and re-applies the scale and translate extents. Eventually, this should end up being parameterized to be a bit more user-configurable. 
+ 
+
+.. rst-class:: trst-method-field-list
+
+:Call signature:
+ .. rst-class:: trst-call-signature
+
+  configureZoom(): void
 
 :trst-method:`getAxis`
 ++++++++++++++++++++++
@@ -373,36 +425,6 @@ This returns the Chart's DOM container's width in pixels.
  .. rst-class:: trst-call-signature
 
   getContainerWidth(): number
-
-:trst-method:`getQueryEnd`
-++++++++++++++++++++++++++
-
-.. rst-class:: trst-method-desc
-
-The getter for _queryEnd. 
- 
-
-.. rst-class:: trst-method-field-list
-
-:Call signature:
- .. rst-class:: trst-call-signature
-
-  getQueryEnd(): number
-
-:trst-method:`getQueryStart`
-++++++++++++++++++++++++++++
-
-.. rst-class:: trst-method-desc
-
-The getter for _queryStart. 
- 
-
-.. rst-class:: trst-method-field-list
-
-:Call signature:
- .. rst-class:: trst-call-signature
-
-  getQueryStart(): number
 
 :trst-method:`getRenderParams`
 ++++++++++++++++++++++++++++++
@@ -524,6 +546,21 @@ This returns the AxisCharts ZoomBehaviors. Currently, this returns an empty list
 
   getZoomBehaviors(): None
 
+:trst-method:`getZoomController`
+++++++++++++++++++++++++++++++++
+
+.. rst-class:: trst-method-desc
+
+A getter for the ZoomController. 
+ 
+
+.. rst-class:: trst-method-field-list
+
+:Call signature:
+ .. rst-class:: trst-call-signature
+
+  getZoomController(): ZoomController
+
 :trst-method:`inRender`
 +++++++++++++++++++++++
 
@@ -538,6 +575,34 @@ This creates the d3 Axis object and uses it to render the SVG elements.
  .. rst-class:: trst-call-signature
 
   inRender(): void
+
+:trst-method:`initialRender`
+++++++++++++++++++++++++++++
+
+.. rst-class:: trst-method-desc
+
+This resets the x scale to agree with the render parameters then calls render(). This method should be called for an initial render, or a render that is intended to reset the view in some way (e.g. whenever a 'submit query' button is pressed in a form). 
+ 
+
+.. rst-class:: trst-method-field-list
+
+:Call signature:
+ .. rst-class:: trst-call-signature
+
+  initialRender(params): void
+:Parameters:
+ :trst-parameter:`params`
+
+ .. rst-class:: trst-parameter-desc
+  
+
+ .. rst-class:: trst-parameter-dl
+
+   :Type:
+    .. rst-class:: trst-type
+   
+     :ref:`AxisRenderParams<AxisRenderParams>`
+   
 
 :trst-method:`postRender`
 +++++++++++++++++++++++++
@@ -559,7 +624,7 @@ There is currently no postRender routine for the AxisChart, so this does nothing
 
 .. rst-class:: trst-method-desc
 
-This updates the query range with the given parameters, and then uses setXScale() to set the internal d3 scale. 
+There is currently no preRender routine for the AxisChart, so this does nothing. 
  
 
 .. rst-class:: trst-method-field-list
@@ -567,20 +632,7 @@ This updates the query range with the given parameters, and then uses setXScale(
 :Call signature:
  .. rst-class:: trst-call-signature
 
-  preRender(params): void
-:Parameters:
- :trst-parameter:`params`
-
- .. rst-class:: trst-parameter-desc
-  
-
- .. rst-class:: trst-parameter-dl
-
-   :Type:
-    .. rst-class:: trst-type
-   
-     :ref:`AxisRenderParams<AxisRenderParams>`
-   
+  preRender(): void
 
 :trst-method:`registerZoomController`
 +++++++++++++++++++++++++++++++++++++
@@ -643,7 +695,7 @@ This method just stores the render parameters on the Chart and calls preRender()
 
 .. rst-class:: trst-method-desc
 
-This resizes the Axis to fit the size of its container. This will be called by a ResizeController if one is assigned to the AxisChart. 
+This resizes the TrackChart to fit the size of its container. This will be called by a ResizeController if one is assigned to the TrackChart. The default behavior is for the TrackChart to fill its container, reconfigure the zoom settings to match the new size, and then re-render the glyphs to appropriately fit in the new dimensions. 
  
 
 .. rst-class:: trst-method-field-list
@@ -716,7 +768,7 @@ This figures out the Chart's SVG viewport dimensions, and sets the Chart's inter
 
 .. rst-class:: trst-method-desc
 
-This uses the AxisChart's current queryStart and queryEnd to set the d3 scale used for the axis. 
+This takes the provided query arguments and sets the d3 scale to map between the provided semantic range and the TrackChart's actual SVG viewport coordinate space. If there is a ZoomController assigned to the TrackChart, it will set the ZoomController's scale instead. 
  
 
 .. rst-class:: trst-method-field-list
@@ -724,4 +776,29 @@ This uses the AxisChart's current queryStart and queryEnd to set the d3 scale us
 :Call signature:
  .. rst-class:: trst-call-signature
 
-  setXScale(): void
+  setXScale(queryStart, queryEnd): void
+:Parameters:
+ :trst-parameter:`queryStart`
+
+ .. rst-class:: trst-parameter-desc
+ Empty comment
+
+ .. rst-class:: trst-parameter-dl
+
+   :Type:
+    .. rst-class:: trst-type
+   
+     number
+   
+ :trst-parameter:`queryEnd`
+
+ .. rst-class:: trst-parameter-desc
+  
+
+ .. rst-class:: trst-parameter-dl
+
+   :Type:
+    .. rst-class:: trst-type
+   
+     number
+   

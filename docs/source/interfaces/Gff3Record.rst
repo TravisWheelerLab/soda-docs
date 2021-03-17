@@ -9,60 +9,65 @@
 .. role:: trst-type
 .. role:: trst-type-parameter
 
-.. _BedAnnotationConfig:
+.. _Gff3Record:
 
-:trst-interface:`BedAnnotationConfig`
-=====================================
-
-:**Extends**:
- .. rst-class:: trst-extends
-
-  :ref:`AnnotationConfig<AnnotationConfig>`
+:trst-interface:`Gff3Record`
+============================
 
 Properties
 ----------
 
 ----
 
-:trst-property:`id`
-+++++++++++++++++++
+:trst-property:`attributes`
++++++++++++++++++++++++++++
 
 .. rst-class:: trst-property-dl
 
 :Type:
  .. rst-class:: trst-type
 
-  string
+  :ref:`Object<Object>`
 
-:trst-property:`itemRgb`
-++++++++++++++++++++++++
-
-.. rst-class:: trst-property-dl
-
-:Type:
- .. rst-class:: trst-type
-
-  undefined | string
-
-:trst-property:`name`
-+++++++++++++++++++++
+:trst-property:`child_features`
++++++++++++++++++++++++++++++++
 
 .. rst-class:: trst-property-dl
 
 :Type:
  .. rst-class:: trst-type
 
-  undefined | string
+  :ref:`Gff3Record<Gff3Record>` [] []
 
-:trst-property:`orientation`
-++++++++++++++++++++++++++++
+:trst-property:`derived_features`
++++++++++++++++++++++++++++++++++
 
 .. rst-class:: trst-property-dl
 
 :Type:
  .. rst-class:: trst-type
 
-  undefined | :ref:`Forward<Forward>` | :ref:`Reverse<Reverse>` | :ref:`Unknown<Unknown>` | :ref:`Unoriented<Unoriented>`
+  :ref:`Gff3Record<Gff3Record>` [] []
+
+:trst-property:`end`
+++++++++++++++++++++
+
+.. rst-class:: trst-property-dl
+
+:Type:
+ .. rst-class:: trst-type
+
+  number
+
+:trst-property:`phase`
+++++++++++++++++++++++
+
+.. rst-class:: trst-property-dl
+
+:Type:
+ .. rst-class:: trst-type
+
+  number
 
 :trst-property:`score`
 ++++++++++++++++++++++
@@ -72,30 +77,30 @@ Properties
 :Type:
  .. rst-class:: trst-type
 
-  undefined | number
+  number
 
-:trst-property:`thickEnd`
-+++++++++++++++++++++++++
-
-.. rst-class:: trst-property-dl
-
-:Type:
- .. rst-class:: trst-type
-
-  undefined | number
-
-:trst-property:`thickStart`
-+++++++++++++++++++++++++++
+:trst-property:`seq_id`
++++++++++++++++++++++++
 
 .. rst-class:: trst-property-dl
 
 :Type:
  .. rst-class:: trst-type
 
-  undefined | number
+  string
 
-:trst-property:`w`
-++++++++++++++++++
+:trst-property:`source`
++++++++++++++++++++++++
+
+.. rst-class:: trst-property-dl
+
+:Type:
+ .. rst-class:: trst-type
+
+  string
+
+:trst-property:`start`
+++++++++++++++++++++++
 
 .. rst-class:: trst-property-dl
 
@@ -104,22 +109,22 @@ Properties
 
   number
 
-:trst-property:`x`
-++++++++++++++++++
+:trst-property:`strand`
++++++++++++++++++++++++
 
 .. rst-class:: trst-property-dl
 
 :Type:
  .. rst-class:: trst-type
 
-  number
+  string
 
-:trst-property:`y`
-++++++++++++++++++
+:trst-property:`type`
++++++++++++++++++++++
 
 .. rst-class:: trst-property-dl
 
 :Type:
  .. rst-class:: trst-type
 
-  number
+  string

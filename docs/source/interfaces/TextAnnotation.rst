@@ -42,20 +42,6 @@ A list of thresholds, measured in the semantic width of the current view in a Ch
 
   number []
 
-:trst-property:`h`
-++++++++++++++++++
-
-.. rst-class:: trst-property-desc
-
-The height of an annotation in the visualization. This is currently not used by the SODA core. 
- 
-.. rst-class:: trst-property-dl
-
-:Type:
- .. rst-class:: trst-type
-
-  number
-
 :trst-property:`id`
 +++++++++++++++++++
 

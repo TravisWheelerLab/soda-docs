@@ -98,16 +98,6 @@ The ID from the GFF3 file. This comes from the optional attributes. For more inf
 
   undefined | string
 
-:trst-property:`h`
-++++++++++++++++++
-
-.. rst-class:: trst-property-dl
-
-:Type:
- .. rst-class:: trst-type
-
-  number
-
 :trst-property:`id`
 +++++++++++++++++++
 

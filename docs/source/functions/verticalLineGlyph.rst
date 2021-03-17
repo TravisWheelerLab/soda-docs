@@ -9,15 +9,15 @@
 .. role:: trst-type
 .. role:: trst-type-parameter
 
-.. _tooltip:
+.. _verticalLineGlyph:
 
-:trst-function:`tooltip`
-========================
+:trst-function:`verticalLineGlyph`
+==================================
 
 :Call signature:
  .. rst-class:: trst-call-signature
 
-  tooltip<A, C>(chart, ann, config): void
+  verticalLineGlyph<A, C>(chart, ann, conf): void
 :Type parameters:
  :trst-type-parameter:`A`
 
@@ -42,7 +42,7 @@
  :trst-parameter:`chart`
 
  .. rst-class:: trst-parameter-desc
- The Chart that the glyph is rendered in.
+ The target Chart.
 
  .. rst-class:: trst-parameter-dl
 
@@ -53,6 +53,9 @@
    
  :trst-parameter:`ann`
 
+ .. rst-class:: trst-parameter-desc
+ The list of Annotation objects to be rendered.
+
  .. rst-class:: trst-parameter-dl
 
    :Type:
@@ -60,15 +63,15 @@
    
      :ref:`A<A>` []
    
- :trst-parameter:`config`
+ :trst-parameter:`conf`
 
  .. rst-class:: trst-parameter-desc
- The Annotation whose representative glyph we are binding the tooltip to. 
+ The parameters for configuring the style of the lines. 
 
  .. rst-class:: trst-parameter-dl
 
    :Type:
     .. rst-class:: trst-type
    
-     :ref:`TooltipConfig<TooltipConfig>` <:ref:`A<A>`, :ref:`C<C>`>
+     :ref:`VerticalLineConfig<VerticalLineConfig>` <:ref:`A<A>`, :ref:`C<C>`>
    

@@ -62,20 +62,6 @@ A list of objects to store the semantic coordinates of each character in the seq
 
   :ref:`CharacterDatum<CharacterDatum>` []
 
-:trst-property:`h`
-++++++++++++++++++
-
-.. rst-class:: trst-property-desc
-
-The height of an annotation in the visualization. This is currently not used by the SODA core. 
- 
-.. rst-class:: trst-property-dl
-
-:Type:
- .. rst-class:: trst-type
-
-  number
-
 :trst-property:`id`
 +++++++++++++++++++
 

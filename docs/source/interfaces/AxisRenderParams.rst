@@ -18,18 +18,29 @@
 
 A simple interface that holds the arguments for the AxisChart render function.
 
+:**Extends**:
+ .. rst-class:: trst-extends
+
+  :ref:`TrackChartRenderParams<TrackChartRenderParams>`
+
 Properties
 ----------
 
 ----
 
+:trst-property:`maxY`
++++++++++++++++++++++
+
+.. rst-class:: trst-property-dl
+
+:Type:
+ .. rst-class:: trst-type
+
+  undefined | number
+
 :trst-property:`queryEnd`
 +++++++++++++++++++++++++
 
-.. rst-class:: trst-property-desc
-
-The start of the query in semantic coordinates. 
- 
 .. rst-class:: trst-property-dl
 
 :Type:
@@ -40,10 +51,6 @@ The start of the query in semantic coordinates.
 :trst-property:`queryStart`
 +++++++++++++++++++++++++++
 
-.. rst-class:: trst-property-desc
-
-The start of the query in semantic coordinates. 
- 
 .. rst-class:: trst-property-dl
 
 :Type:

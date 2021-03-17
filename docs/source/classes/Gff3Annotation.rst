@@ -123,20 +123,6 @@ The ID from the GFF3 file. This comes from the optional attributes. For more inf
 
   undefined | string
 
-:trst-property:`h`
-++++++++++++++++++
-
-.. rst-class:: trst-property-desc
-
-The height of an annotation in the visualization. This is currently not used by the SODA core. 
- 
-.. rst-class:: trst-property-dl
-
-:Type:
- .. rst-class:: trst-type
-
-  number
-
 :trst-property:`id`
 +++++++++++++++++++
 

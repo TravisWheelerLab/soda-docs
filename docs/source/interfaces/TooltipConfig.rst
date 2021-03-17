@@ -43,20 +43,6 @@ Properties
 
 ----
 
-:trst-property:`ann`
-++++++++++++++++++++
-
-.. rst-class:: trst-property-desc
-
-The Annotation object whose representative glyph we are binding the tooltip to. 
- 
-.. rst-class:: trst-property-dl
-
-:Type:
- .. rst-class:: trst-type
-
-  :ref:`A<A>`
-
 :trst-property:`backgroundColor`
 ++++++++++++++++++++++++++++++++
 
