@@ -1,0 +1,353 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Drawing rectangles &mdash; SODA 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Click and hover behaviors" href="click-and-hover.html" />
+    <link rel="prev" title="Examples" href="../examples.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SODA
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../examples.html">Examples</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Drawing rectangles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="click-and-hover.html">Click and hover behaviors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layout.html">Using the layout module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plots.html">Drawing plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bed.html">Rendering BED data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gff3.html">Rendering GFF3 data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SODA</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../examples.html">Examples</a> &raquo;</li>
+        
+      <li>Drawing rectangles</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/examples/rectangles.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="drawing-rectangles">
+<span id="id1"></span><h1>Drawing rectangles<a class="headerlink" href="#drawing-rectangles" title="Permalink to this headline">¶</a></h1>
+<p>To get started, we’ll first want to import d3 and SODA.</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">d3</span> <span class="nx">from</span> <span class="s1">&#39;d3&#39;</span><span class="p">;</span>
+<span class="k">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">soda</span> <span class="nx">from</span> <span class="s2">&quot;@traviswheelerlab/soda&quot;</span>
+</pre></div>
+</div>
+<p>Next, we’ll create two SODA objects: an <a class="reference internal" href="../classes/AxisChart.html#axischart"><span class="std std-ref">AxisChart</span></a> and a <a class="reference internal" href="../classes/TrackChart.html#trackchart"><span class="std std-ref">TrackChart</span></a>.
+The AxisChart constructor expects a <a class="reference internal" href="../interfaces/ChartConfig.html#chartconfig"><span class="std std-ref">ChartConfig</span></a> argument, and the TrackChart expects a <a class="reference internal" href="../interfaces/TrackChartConfig.html#trackchartconfig"><span class="std std-ref">TrackChartConfig</span></a> argument.
+In this case, both config objects only provide a CSS selector that identifies the DOM container that the charts will be inserted into.
+Once these objects are instantiated, the charts will exist in the DOM as empty SVG elements.</p>
+<p>Once we have our charts, we’ll create a <a class="reference internal" href="../classes/ZoomController.html#zoomcontroller"><span class="std std-ref">ZoomController</span></a> and a <a class="reference internal" href="../classes/ResizeController.html#resizecontroller"><span class="std std-ref">ResizeController</span></a>, which are objects that make it easy to synchronize zoom and resize events across multiple charts.
+Once the controllers are created, we configure them to manage both of our charts, and we wire the ResizeController to trigger upon a browser resize event.</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">zoomController</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">soda</span><span class="p">.</span><span class="nx">ZoomController</span><span class="p">();</span>
+<span class="kd">let</span> <span class="nx">resizeController</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">soda</span><span class="p">.</span><span class="nx">ResizeController</span><span class="p">();</span>
+
+<span class="nx">zoomController</span><span class="p">.</span><span class="nx">addComponent</span><span class="p">(</span><span class="nx">axis</span><span class="p">);</span>
+<span class="nx">zoomController</span><span class="p">.</span><span class="nx">addComponent</span><span class="p">(</span><span class="nx">chart</span><span class="p">);</span>
+
+<span class="nx">resizeController</span><span class="p">.</span><span class="nx">addComponent</span><span class="p">(</span><span class="nx">axis</span><span class="p">);</span>
+<span class="nx">resizeController</span><span class="p">.</span><span class="nx">addComponent</span><span class="p">(</span><span class="nx">chart</span><span class="p">);</span>
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">onresize</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">resizeController</span><span class="p">.</span><span class="nx">trigger</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Now we’ll need some annotation data to work with.
+In SODA, annotation data is represented with <a class="reference internal" href="../classes/Annotation.html#annotation"><span class="std std-ref">Annotation</span></a> objects.
+For this example, we’ll manually create a handful of Annotations.</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">ann</span>: <span class="kt">soda.Annotation</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mf">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">annConf</span>: <span class="kt">soda.AnnotationConfig</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">id</span><span class="o">:</span> <span class="sb">`</span><span class="si">${</span><span class="nx">i</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
+        <span class="nx">w</span>: <span class="kt">100</span><span class="p">,</span>
+        <span class="nx">x</span>: <span class="kt">i</span> <span class="o">*</span> <span class="mf">100</span><span class="p">,</span>
+        <span class="nx">y</span>: <span class="kt">i</span><span class="p">,</span>
+    <span class="p">};</span>
+    <span class="nx">ann</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="k">new</span> <span class="nx">soda</span><span class="p">.</span><span class="nx">Annotation</span><span class="p">(</span><span class="nx">annConf</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Before rendering SODA Charts, they need to be initialized with a RenderParams object.
+At a minimum, the RenderParams object supplies the initial coordinate range that will be rendered in the Chart.</p>
+<p>In our case, we’ll need both an <a class="reference internal" href="../interfaces/AxisRenderParams.html#axisrenderparams"><span class="std std-ref">AxisRenderParams</span></a> and a <a class="reference internal" href="../interfaces/TrackChartRenderParams.html#trackchartrenderparams"><span class="std std-ref">TrackChartRenderParams</span></a>.
+It turns out that TrackChartRenderParams implicitly implements the AxisRenderParams interface, so we’ll only need the former.</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">renderParams</span>: <span class="kt">soda.TrackChartRenderParams</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">queryStart</span>: <span class="kt">0</span><span class="p">,</span>
+    <span class="nx">queryEnd</span>: <span class="kt">1000</span><span class="p">,</span>
+    <span class="nx">maxY</span>: <span class="kt">10</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>All SODA glyphs are configurable with config object that is passed as an argument into a rendering function.
+The config objects have type parameters for both the type of Annotation object and Chart object that will be used.
+Each style option is set via a callback function that implicitly receives a reference to an Annotation and the Chart it is being rendered in.
+This allows annotation glyphs to be dynamically styled using data stored on Annotations or Charts.</p>
+<p>Here, we’ll create a <a class="reference internal" href="../interfaces/RectangleConfig.html#rectangleconfig"><span class="std std-ref">RectangleConfig</span></a> object that is appropriately typed with Annotation and TrackChart.
+Every glyph config requires a selector string, which is used to group glyphs rendered by distinct calls to the SODA rendering API together.
+To color the fill and stroke of the rectangles, we’ll supply callback functions that use each Annotation’s id property as the argument to a D3 color scale.</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">colorScale</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">scaleOrdinal</span><span class="p">(</span><span class="nx">d3</span><span class="p">.</span><span class="nx">schemeCategory10</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">rectConf</span>: <span class="kt">soda.RectangleConfig</span><span class="o">&lt;</span><span class="nx">soda</span><span class="p">.</span><span class="nx">Annotation</span><span class="p">,</span> <span class="nx">soda</span><span class="p">.</span><span class="nx">TrackChart</span><span class="o">&lt;</span><span class="nx">soda</span><span class="p">.</span><span class="nx">TrackChartRenderParams</span><span class="o">&gt;&gt;</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;ann&#39;</span><span class="p">,</span>
+    <span class="nx">fillColor</span><span class="o">:</span> <span class="p">(</span><span class="nx">a</span>: <span class="kt">soda.Annotation</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">colorScale</span><span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">id</span><span class="p">),</span>
+    <span class="nx">strokeColor</span><span class="o">:</span> <span class="p">(</span><span class="nx">a</span>: <span class="kt">soda.Annotation</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">colorScale</span><span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">id</span><span class="p">)</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>We now have everything we need to render the rectangles.
+First, we’ll render each chart with our RenderParams, which will prepare the charts to appropriately display our annotations.</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="nx">axis</span><span class="p">.</span><span class="nx">initialRender</span><span class="p">(</span><span class="nx">renderParams</span><span class="p">);</span>
+<span class="nx">chart</span><span class="p">.</span><span class="nx">initialRender</span><span class="p">(</span><span class="nx">renderParams</span><span class="p">);</span>
+</pre></div>
+</div>
+<div id="axis-chart" class="axis"></div>
+<div id="track-chart" class="chart"></div>
+<script src="../_static/example-builds/rectangles/main.js"></script>
+<hr class="docutils" />
+<p>Finally, we’ll make a single call to the <a class="reference internal" href="../functions/rectangleGlyph.html#rectangleglyph"><span class="std std-ref">rectangleGlyph</span></a> function, which will render our rectangles.</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="nx">soda</span><span class="p">.</span><span class="nx">rectangleGlyph</span><span class="p">(</span><span class="nx">chart</span><span class="p">,</span> <span class="nx">ann</span><span class="p">,</span> <span class="nx">rectConf</span><span class="p">);</span>
+</pre></div>
+</div>
+<div id="axis-chart-2" class="axis"></div>
+<div id="track-chart-2" class="chart"></div>
+<script src="../_static/example-builds/rectangles-2/main.js"></script>
+<hr class="docutils" />
+<p>The full code:</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">d3</span> <span class="nx">from</span> <span class="s1">&#39;d3&#39;</span><span class="p">;</span>
+<span class="k">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">soda</span> <span class="nx">from</span> <span class="s2">&quot;@traviswheelerlab/soda&quot;</span>
+
+<span class="kd">let</span> <span class="nx">axis</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">soda</span><span class="p">.</span><span class="nx">AxisChart</span><span class="p">({</span><span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;#axis-chart&#39;</span><span class="p">});</span>
+<span class="kd">let</span> <span class="nx">chart</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">soda</span><span class="p">.</span><span class="nx">TrackChart</span><span class="p">({</span><span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;#track-chart&#39;</span><span class="p">});</span>
+
+<span class="kd">let</span> <span class="nx">zoomController</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">soda</span><span class="p">.</span><span class="nx">ZoomController</span><span class="p">();</span>
+<span class="kd">let</span> <span class="nx">resizeController</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">soda</span><span class="p">.</span><span class="nx">ResizeController</span><span class="p">();</span>
+
+<span class="nx">zoomController</span><span class="p">.</span><span class="nx">addComponent</span><span class="p">(</span><span class="nx">axis</span><span class="p">);</span>
+<span class="nx">zoomController</span><span class="p">.</span><span class="nx">addComponent</span><span class="p">(</span><span class="nx">chart</span><span class="p">);</span>
+
+<span class="nx">resizeController</span><span class="p">.</span><span class="nx">addComponent</span><span class="p">(</span><span class="nx">axis</span><span class="p">);</span>
+<span class="nx">resizeController</span><span class="p">.</span><span class="nx">addComponent</span><span class="p">(</span><span class="nx">chart</span><span class="p">);</span>
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">onresize</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">resizeController</span><span class="p">.</span><span class="nx">trigger</span><span class="p">();</span>
+
+<span class="kd">let</span> <span class="nx">ann</span>: <span class="kt">soda.Annotation</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mf">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">annConf</span>: <span class="kt">soda.AnnotationConfig</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">id</span><span class="o">:</span> <span class="sb">`</span><span class="si">${</span><span class="nx">i</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
+        <span class="nx">w</span>: <span class="kt">100</span><span class="p">,</span>
+        <span class="nx">x</span>: <span class="kt">i</span> <span class="o">*</span> <span class="mf">100</span><span class="p">,</span>
+        <span class="nx">y</span>: <span class="kt">i</span><span class="p">,</span>
+    <span class="p">};</span>
+    <span class="nx">ann</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="k">new</span> <span class="nx">soda</span><span class="p">.</span><span class="nx">Annotation</span><span class="p">(</span><span class="nx">annConf</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">renderParams</span>: <span class="kt">soda.TrackChartRenderParams</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">queryStart</span>: <span class="kt">0</span><span class="p">,</span>
+    <span class="nx">queryEnd</span>: <span class="kt">1000</span><span class="p">,</span>
+    <span class="nx">maxY</span>: <span class="kt">10</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">colorScale</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">scaleOrdinal</span><span class="p">(</span><span class="nx">d3</span><span class="p">.</span><span class="nx">schemeCategory10</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">rectConf</span>: <span class="kt">soda.RectangleConfig</span><span class="o">&lt;</span><span class="nx">soda</span><span class="p">.</span><span class="nx">Annotation</span><span class="p">,</span> <span class="nx">soda</span><span class="p">.</span><span class="nx">TrackChart</span><span class="o">&lt;</span><span class="nx">soda</span><span class="p">.</span><span class="nx">TrackChartRenderParams</span><span class="o">&gt;&gt;</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;ann&#39;</span><span class="p">,</span>
+    <span class="nx">fillColor</span><span class="o">:</span> <span class="p">(</span><span class="nx">a</span>: <span class="kt">soda.Annotation</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">colorScale</span><span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">id</span><span class="p">),</span>
+    <span class="nx">strokeColor</span><span class="o">:</span> <span class="p">(</span><span class="nx">a</span>: <span class="kt">soda.Annotation</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">colorScale</span><span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">id</span><span class="p">)</span>
+<span class="p">};</span>
+
+<span class="nx">axis</span><span class="p">.</span><span class="nx">initialRender</span><span class="p">(</span><span class="nx">renderParams</span><span class="p">);</span>
+<span class="nx">chart</span><span class="p">.</span><span class="nx">initialRender</span><span class="p">(</span><span class="nx">renderParams</span><span class="p">);</span>
+
+<span class="nx">soda</span><span class="p">.</span><span class="nx">rectangleGlyph</span><span class="p">(</span><span class="nx">chart</span><span class="p">,</span> <span class="nx">ann</span><span class="p">,</span> <span class="nx">rectConf</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="click-and-hover.html" class="btn btn-neutral float-right" title="Click and hover behaviors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../examples.html" class="btn btn-neutral float-left" title="Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Jack Roddy.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

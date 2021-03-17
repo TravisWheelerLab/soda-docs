@@ -1,0 +1,386 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Annotation &mdash; SODA 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="AnnotationGroup" href="AnnotationGroup.html" />
+    <link rel="prev" title="Classes" href="../classes.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SODA
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../classes.html">Classes</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><span class="trst-class">Annotation</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#constructor">Constructor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#properties">Properties</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#h"><span class="trst-property">h</span></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id"><span class="trst-property">id</span></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#w"><span class="trst-property">w</span></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#x"><span class="trst-property">x</span></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#y"><span class="trst-property">y</span></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">Methods</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#getw"><span class="trst-method">getW</span></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#getx"><span class="trst-method">getX</span></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#getx2"><span class="trst-method">getX2</span></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#sety"><span class="trst-method">setY</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="AnnotationGroup.html"><span class="trst-class">AnnotationGroup</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="BedAnnotation.html"><span class="trst-class">BedAnnotation</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Gff3Annotation.html"><span class="trst-class">Gff3Annotation</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PlotAnnotation.html"><span class="trst-class">PlotAnnotation</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PointDatum.html"><span class="trst-class">PointDatum</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SequenceAnnotation.html"><span class="trst-class">SequenceAnnotation</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AxisChart.html"><span class="trst-class">AxisChart</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="BarChart.html"><span class="trst-class">BarChart</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ChartBase.html"><span class="trst-class">ChartBase</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="HeatmapChart.html"><span class="trst-class">HeatmapChart</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="LineChart.html"><span class="trst-class">LineChart</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="TrackChart.html"><span class="trst-class">TrackChart</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ChevronZoomBehavior.html"><span class="trst-class">ChevronZoomBehavior</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ForwardChevronZoomBehavior.html"><span class="trst-class">ForwardChevronZoomBehavior</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PatternSwitchZoomBehavior.html"><span class="trst-class">PatternSwitchZoomBehavior</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ReverseChevronZoomBehavior.html"><span class="trst-class">ReverseChevronZoomBehavior</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="LineZoomBehavior.html"><span class="trst-class">LineZoomBehavior</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="VerticalAxisZoomBehavior.html"><span class="trst-class">VerticalAxisZoomBehavior</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="BarPlotZoomBehavior.html"><span class="trst-class">BarPlotZoomBehavior</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="HeatmapZoomBehavior.html"><span class="trst-class">HeatmapZoomBehavior</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="LinePlotZoomBehavior.html"><span class="trst-class">LinePlotZoomBehavior</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="RectZoomBehavior.html"><span class="trst-class">RectZoomBehavior</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SequenceCharacterZoomBehavior.html"><span class="trst-class">SequenceCharacterZoomBehavior</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SequenceZoomBehavior.html"><span class="trst-class">SequenceZoomBehavior</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="TextZoomBehavior.html"><span class="trst-class">TextZoomBehavior</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AnnotationGraph.html"><span class="trst-class">AnnotationGraph</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="QueryController.html"><span class="trst-class">QueryController</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ResizeController.html"><span class="trst-class">ResizeController</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="RuleController.html"><span class="trst-class">RuleController</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="TrackRack.html"><span class="trst-class">TrackRack</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ZoomController.html"><span class="trst-class">ZoomController</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces.html">Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions.html">Functions</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SODA</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../api.html">API</a> &raquo;</li>
+        
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+        
+      <li><span class="trst-class">Annotation</span></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/classes/Annotation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="annotation">
+<span id="id1"></span><h1><span class="trst-class">Annotation</span><a class="headerlink" href="#annotation" title="Permalink to this headline">¶</a></h1>
+<p class="trst-class-desc"><span class="trst-class">Annotation</span> objects are the main data structure used by SODA to store information about alignments. In many cases, this should be sufficient to store the information to represent a single glyph in a visualization. If more information is needed, the Annotation class should be extended.</p>
+<div class="section" id="constructor">
+<h2>Constructor<a class="headerlink" href="#constructor" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<dl class="field-list simple">
+<dt class="field-odd">Call signature</dt>
+<dd class="field-odd"><p class="trst-call-signature">new Annotation(config): Annotation</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><span class="trst-parameter">config</span></p>
+<dl class="trst-parameter-dl field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p class="trst-type"><a class="reference internal" href="../interfaces/AnnotationConfig.html#annotationconfig"><span class="std std-ref">AnnotationConfig</span></a></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<div class="section" id="h">
+<h3><span class="trst-property">h</span><a class="headerlink" href="#h" title="Permalink to this headline">¶</a></h3>
+<p class="trst-property-desc">The height of an annotation in the visualization. This is currently not used by the SODA core.</p>
+<dl class="trst-property-dl field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p class="trst-type">number</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="id">
+<h3><span class="trst-property">id</span><a class="headerlink" href="#id" title="Permalink to this headline">¶</a></h3>
+<p class="trst-property-desc">A unique identifier for an Annotation object. Currently, it is up to users to make sure that this field is uniquely assigned. SODA will not behave as intended if two distinct Annotations have the same id.</p>
+<dl class="trst-property-dl field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p class="trst-type">string</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="w">
+<h3><span class="trst-property">w</span><a class="headerlink" href="#w" title="Permalink to this headline">¶</a></h3>
+<p class="trst-property-desc">The width of the annotation in semantic coordinates.</p>
+<dl class="trst-property-dl field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p class="trst-type">number</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="x">
+<h3><span class="trst-property">x</span><a class="headerlink" href="#x" title="Permalink to this headline">¶</a></h3>
+<p class="trst-property-desc">The x position of the annotation in semantic coordinates (generally a position on a chromosome in base pairs)</p>
+<dl class="trst-property-dl field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p class="trst-type">number</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="y">
+<h3><span class="trst-property">y</span><a class="headerlink" href="#y" title="Permalink to this headline">¶</a></h3>
+<p class="trst-property-desc">The y position of the annotation. This rarely has semantic meaning, and is probably used to prevent horizontal overlap or preserve clarity in the visualization.</p>
+<dl class="trst-property-dl field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p class="trst-type">number</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<div class="section" id="getw">
+<h3><span class="trst-method">getW</span><a class="headerlink" href="#getw" title="Permalink to this headline">¶</a></h3>
+<p class="trst-method-desc">Getter for the width.</p>
+<dl class="trst-method-field-list field-list simple">
+<dt class="field-odd">Call signature</dt>
+<dd class="field-odd"><p class="trst-call-signature">getW(): number</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="getx">
+<h3><span class="trst-method">getX</span><a class="headerlink" href="#getx" title="Permalink to this headline">¶</a></h3>
+<p class="trst-method-desc">Getter for the x coordinate.</p>
+<dl class="trst-method-field-list field-list simple">
+<dt class="field-odd">Call signature</dt>
+<dd class="field-odd"><p class="trst-call-signature">getX(): number</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="getx2">
+<h3><span class="trst-method">getX2</span><a class="headerlink" href="#getx2" title="Permalink to this headline">¶</a></h3>
+<p class="trst-method-desc">Gets the x2 coordinate.</p>
+<dl class="trst-method-field-list field-list simple">
+<dt class="field-odd">Call signature</dt>
+<dd class="field-odd"><p class="trst-call-signature">getX2(): number</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="sety">
+<h3><span class="trst-method">setY</span><a class="headerlink" href="#sety" title="Permalink to this headline">¶</a></h3>
+<p class="trst-method-desc">Sets the y coordinate. This exists largely to let the layout module be oblivious to the existence of AnnotationGroups.</p>
+<dl class="trst-method-field-list field-list simple">
+<dt class="field-odd">Call signature</dt>
+<dd class="field-odd"><p class="trst-call-signature">setY(y): void</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><span class="trst-parameter">y</span></p>
+<dl class="trst-parameter-dl field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p class="trst-type">number</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="AnnotationGroup.html" class="btn btn-neutral float-right" title="AnnotationGroup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../classes.html" class="btn btn-neutral float-left" title="Classes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Jack Roddy.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,330 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>chevronRectYFn &mdash; SODA 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="chevronXFn" href="chevronXFn.html" />
+    <link rel="prev" title="chevronPatternViewBoxFn" href="chevronPatternViewBoxFn.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SODA
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../classes.html">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces.html">Interfaces</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../functions.html">Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="isCompactAnn.html"><span class="trst-function">isCompactAnn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axisRenderCallback.html"><span class="trst-function">axisRenderCallback</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="addClickBehavior.html"><span class="trst-function">addClickBehavior</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="chevronHFn.html"><span class="trst-function">chevronHFn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="chevronLineYFn.html"><span class="trst-function">chevronLineYFn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="chevronPathDFn.html"><span class="trst-function">chevronPathDFn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="chevronPatternViewBoxFn.html"><span class="trst-function">chevronPatternViewBoxFn</span></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><span class="trst-function">chevronRectYFn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="chevronXFn.html"><span class="trst-function">chevronXFn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="forwardChevronPathFn.html"><span class="trst-function">forwardChevronPathFn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="forwardChevronXFn.html"><span class="trst-function">forwardChevronXFn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="reverseChevronPathFn.html"><span class="trst-function">reverseChevronPathFn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="reverseChevronXFn.html"><span class="trst-function">reverseChevronXFn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="chevronLineGlyph.html"><span class="trst-function">chevronLineGlyph</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="forwardChevronLine.html"><span class="trst-function">forwardChevronLine</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="reverseChevronLine.html"><span class="trst-function">reverseChevronLine</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="chevronPatternId.html"><span class="trst-function">chevronPatternId</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="createChevronPatterns.html"><span class="trst-function">createChevronPatterns</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="chevronRectangleGlyph.html"><span class="trst-function">chevronRectangleGlyph</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="forwardChevronRectangleGlyph.html"><span class="trst-function">forwardChevronRectangleGlyph</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="reverseChevronRectangleGlyph.html"><span class="trst-function">reverseChevronRectangleGlyph</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="horizontalLineX1Fn.html"><span class="trst-function">horizontalLineX1Fn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="horizontalLineX2Fn.html"><span class="trst-function">horizontalLineX2Fn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="horizontalLineYFn.html"><span class="trst-function">horizontalLineYFn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="verticalLineXFn.html"><span class="trst-function">verticalLineXFn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="verticalLineY1Fn.html"><span class="trst-function">verticalLineY1Fn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="verticalLineY2Fn.html"><span class="trst-function">verticalLineY2Fn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="horizontalLine.html"><span class="trst-function">horizontalLine</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="lineGlyph.html"><span class="trst-function">lineGlyph</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="verticalLine.html"><span class="trst-function">verticalLine</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axisXFn.html"><span class="trst-function">axisXFn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="barPlot.html"><span class="trst-function">barPlot</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="barHeightFunc.html"><span class="trst-function">barHeightFunc</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="heatmap.html"><span class="trst-function">heatmap</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="linePlot.html"><span class="trst-function">linePlot</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="lineFunc.html"><span class="trst-function">lineFunc</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="getPlotGSelection.html"><span class="trst-function">getPlotGSelection</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="verticalAxis.html"><span class="trst-function">verticalAxis</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="rectHFn.html"><span class="trst-function">rectHFn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="rectWFn.html"><span class="trst-function">rectWFn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="rectXFn.html"><span class="trst-function">rectXFn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="rectYFn.html"><span class="trst-function">rectYFn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="rectangleGlyph.html"><span class="trst-function">rectangleGlyph</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="characterXFn.html"><span class="trst-function">characterXFn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="sequenceXFn.html"><span class="trst-function">sequenceXFn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="sequenceYFn.html"><span class="trst-function">sequenceYFn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="sequenceGlyph.html"><span class="trst-function">sequenceGlyph</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="textXFn.html"><span class="trst-function">textXFn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="textYFn.html"><span class="trst-function">textYFn</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="textGlyph.html"><span class="trst-function">textGlyph</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="addHoverBehavior.html"><span class="trst-function">addHoverBehavior</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="getAllIds.html"><span class="trst-function">getAllIds</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="getAnnotationById.html"><span class="trst-function">getAnnotationById</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="getSelectionById.html"><span class="trst-function">getSelectionById</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mapIdToAnnotation.html"><span class="trst-function">mapIdToAnnotation</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mapIdToSelection.html"><span class="trst-function">mapIdToSelection</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="greedyGraphLayout.html"><span class="trst-function">greedyGraphLayout</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="heuristicGraphLayout.html"><span class="trst-function">heuristicGraphLayout</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="intervalGraphLayout.html"><span class="trst-function">intervalGraphLayout</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bed6Parse.html"><span class="trst-function">bed6Parse</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="customBedParse.html"><span class="trst-function">customBedParse</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gff3ParseFlat.html"><span class="trst-function">gff3ParseFlat</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gff3ParseGrouped.html"><span class="trst-function">gff3ParseGrouped</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="isBufferedQueryParameters.html"><span class="trst-function">isBufferedQueryParameters</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="defaultTooltipMouseout.html"><span class="trst-function">defaultTooltipMouseout</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="defaultTooltipMouseover.html"><span class="trst-function">defaultTooltipMouseover</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tooltip.html"><span class="trst-function">tooltip</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tooltipBackgroundColor.html"><span class="trst-function">tooltipBackgroundColor</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tooltipBorderRadius.html"><span class="trst-function">tooltipBorderRadius</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tooltipOpacity.html"><span class="trst-function">tooltipOpacity</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tooltipPadding.html"><span class="trst-function">tooltipPadding</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tooltipTextColor.html"><span class="trst-function">tooltipTextColor</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="registerZoomBehavior.html"><span class="trst-function">registerZoomBehavior</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="isZoomableChart.html"><span class="trst-function">isZoomableChart</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SODA</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../api.html">API</a> &raquo;</li>
+        
+          <li><a href="../functions.html">Functions</a> &raquo;</li>
+        
+      <li><span class="trst-function">chevronRectYFn</span></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/functions/chevronRectYFn.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="chevronrectyfn">
+<span id="id1"></span><h1><span class="trst-function">chevronRectYFn</span><a class="headerlink" href="#chevronrectyfn" title="Permalink to this headline">¶</a></h1>
+<dl class="field-list">
+<dt class="field-odd">Call signature</dt>
+<dd class="field-odd"><p class="trst-call-signature">chevronRectYFn&lt;A, C&gt;(a, c): number</p>
+</dd>
+<dt class="field-even">Type parameters</dt>
+<dd class="field-even"><p><span class="trst-type-parameter">A</span></p>
+<dl class="trst-type-parameter-dl field-list simple">
+<dt class="field-odd">Type constraint</dt>
+<dd class="field-odd"><p class="trst-type-constraint">A extends <a class="reference internal" href="../classes/Annotation.html#annotation"><span class="std std-ref">Annotation</span></a> &lt;<span class="xref std std-ref">A</span>&gt;</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Type parameters</dt>
+<dd class="field-even"><p><span class="trst-type-parameter">C</span></p>
+<dl class="trst-type-parameter-dl field-list simple">
+<dt class="field-odd">Type constraint</dt>
+<dd class="field-odd"><p class="trst-type-constraint">C extends <a class="reference internal" href="../interfaces/Chart.html#chart"><span class="std std-ref">Chart</span></a> &lt;any, <span class="xref std std-ref">C</span>&gt;</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><span class="trst-parameter">a</span></p>
+<dl class="trst-parameter-dl field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p class="trst-type"><span class="xref std std-ref">A</span></p>
+</dd>
+</dl>
+<p><span class="trst-parameter">c</span></p>
+<dl class="trst-parameter-dl field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p class="trst-type"><span class="xref std std-ref">C</span></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="chevronXFn.html" class="btn btn-neutral float-right" title="chevronXFn" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="chevronPatternViewBoxFn.html" class="btn btn-neutral float-left" title="chevronPatternViewBoxFn" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Jack Roddy.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
