@@ -14,6 +14,10 @@
 :trst-function:`gff3ParseFlat`
 ==============================
 
+.. rst-class:: trst-function-desc
+
+This function takes a string of newline delimited GFF3 records and parses them into SODA Gff3Annotation objects. The objects are returned in a flat array with no semantic grouping.
+
 :Call signature:
  .. rst-class:: trst-call-signature
 

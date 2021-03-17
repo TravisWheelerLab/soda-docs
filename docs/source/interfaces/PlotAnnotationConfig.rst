@@ -16,7 +16,7 @@
 
 .. rst-class:: trst-interface-desc
 
-An interface for initializing a PlotAnnotation.
+A simple interface that holds the arguments for a PlotAnnotation constructor.
 
 :**Extends**:
  .. rst-class:: trst-extends
@@ -31,6 +31,10 @@ Properties
 :trst-property:`id`
 +++++++++++++++++++
 
+.. rst-class:: trst-property-desc
+
+A unique identifier for an Annotation object. Currently, it is up to users to make sure that this field is uniquely assigned. SODA will not behave as intended if two distinct Annotations have the same id. 
+ 
 .. rst-class:: trst-property-dl
 
 :Type:
@@ -41,6 +45,10 @@ Properties
 :trst-property:`points`
 +++++++++++++++++++++++
 
+.. rst-class:: trst-property-desc
+
+The point data that will be plotted. 
+ 
 .. rst-class:: trst-property-dl
 
 :Type:
@@ -51,6 +59,10 @@ Properties
 :trst-property:`w`
 ++++++++++++++++++
 
+.. rst-class:: trst-property-desc
+
+The width of the annotation in semantic coordinates. 
+ 
 .. rst-class:: trst-property-dl
 
 :Type:
@@ -61,6 +73,10 @@ Properties
 :trst-property:`x`
 ++++++++++++++++++
 
+.. rst-class:: trst-property-desc
+
+The x position of the annotation in semantic coordinates (generally a position on a chromosome in base pairs) 
+ 
 .. rst-class:: trst-property-dl
 
 :Type:
@@ -71,6 +87,10 @@ Properties
 :trst-property:`y`
 ++++++++++++++++++
 
+.. rst-class:: trst-property-desc
+
+The y position of the annotation. This rarely has semantic meaning, and is probably used to prevent horizontal overlap or preserve clarity in the visualization. 
+ 
 .. rst-class:: trst-property-dl
 
 :Type:

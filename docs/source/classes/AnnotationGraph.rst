@@ -121,6 +121,11 @@ Methods
 :trst-method:`getAnnotationFromId`
 ++++++++++++++++++++++++++++++++++
 
+.. rst-class:: trst-method-desc
+
+Get the actual Annotation object from a vertex ID. 
+ 
+
 .. rst-class:: trst-method-field-list
 
 :Call signature:
@@ -129,6 +134,9 @@ Methods
   getAnnotationFromId(id): A
 :Parameters:
  :trst-parameter:`id`
+
+ .. rst-class:: trst-parameter-desc
+ The vertex ID. 
 
  .. rst-class:: trst-parameter-dl
 
@@ -141,14 +149,22 @@ Methods
 :trst-method:`getEdges`
 +++++++++++++++++++++++
 
+.. rst-class:: trst-method-desc
+
+Get a list of the vertices with which the supplied vertex shares an edge with. 
+ 
+
 .. rst-class:: trst-method-field-list
 
 :Call signature:
  .. rst-class:: trst-call-signature
 
-  getEdges(n): None
+  getEdges(vertex): None
 :Parameters:
- :trst-parameter:`n`
+ :trst-parameter:`vertex`
+
+ .. rst-class:: trst-parameter-desc
+ The ID of the vertex to check. 
 
  .. rst-class:: trst-parameter-dl
 
@@ -160,6 +176,11 @@ Methods
 
 :trst-method:`getVertices`
 ++++++++++++++++++++++++++
+
+.. rst-class:: trst-method-desc
+
+Get a list of the IDs for each vertex in the graph. 
+ 
 
 .. rst-class:: trst-method-field-list
 

@@ -14,6 +14,10 @@
 :trst-function:`intervalGraphLayout`
 ====================================
 
+.. rst-class:: trst-function-desc
+
+This function takes a list of Annotation objects and uses a greedy interval scheduling algorithm to assign each of them a y coordinate in terms of horizontal bins that will prevent any horizontal overlap when they are rendered in a Chart.
+
 :Call signature:
  .. rst-class:: trst-call-signature
 

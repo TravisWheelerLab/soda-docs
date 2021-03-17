@@ -14,6 +14,10 @@
 :trst-function:`tooltip`
 ========================
 
+.. rst-class:: trst-function-desc
+
+A utility function to actually apply a TooltipConfig to a glyph. It uses the hover plugin to add a hover behavior for the tooltip functionality.
+
 :Call signature:
  .. rst-class:: trst-call-signature
 

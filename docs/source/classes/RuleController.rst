@@ -18,7 +18,7 @@
 
 This plugin object allows a dynamic vertical rule to be added to any Chart.
 
-**Implements**
+:**Implements**:
  .. rst-class:: trst-implements
 
   :ref:`Plugin<Plugin>`
@@ -271,6 +271,11 @@ A utility function that creates the actual rule.
 :trst-method:`disable`
 ++++++++++++++++++++++
 
+.. rst-class:: trst-method-desc
+
+Disable the ruler. This will cause it to disappear from the attached Charts. 
+ 
+
 .. rst-class:: trst-method-field-list
 
 :Call signature:
@@ -280,6 +285,11 @@ A utility function that creates the actual rule.
 
 :trst-method:`enable`
 +++++++++++++++++++++
+
+.. rst-class:: trst-method-desc
+
+Enable the ruler. This will cause it to appear in the attached Charts. 
+ 
 
 .. rst-class:: trst-method-field-list
 
@@ -306,6 +316,11 @@ This method is responsible for moving the rule on each of the RuleController's c
 :trst-method:`toggle`
 +++++++++++++++++++++
 
+.. rst-class:: trst-method-desc
+
+Toggle the rule on or off. 
+ 
+
 .. rst-class:: trst-method-field-list
 
 :Call signature:
@@ -314,6 +329,9 @@ This method is responsible for moving the rule on each of the RuleController's c
   toggle(self): void
 :Parameters:
  :trst-parameter:`self`
+
+ .. rst-class:: trst-parameter-desc
+ A reference to the ruler itself for situations in which JavaScript anonymous functions mess up the context of 'this.' 
 
  .. rst-class:: trst-parameter-dl
 

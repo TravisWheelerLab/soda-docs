@@ -14,6 +14,10 @@
 :trst-function:`sequenceGlyph`
 ==============================
 
+.. rst-class:: trst-function-desc
+
+An experimental function that renders a list of Annotation objects in a target chart as sequence glyphs. In a sequence glyph, each integer semantic coordinate that the Annotation covers is rendered as a character. This works, but it is very hard on performance.
+
 :Call signature:
  .. rst-class:: trst-call-signature
 

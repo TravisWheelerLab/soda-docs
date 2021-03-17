@@ -61,6 +61,10 @@ Properties
 :trst-property:`group`
 ++++++++++++++++++++++
 
+.. rst-class:: trst-property-desc
+
+The group of Annotations that live in this object. 
+ 
 .. rst-class:: trst-property-dl
 
 :Type:
@@ -142,6 +146,11 @@ Methods
 :trst-method:`add`
 ++++++++++++++++++
 
+.. rst-class:: trst-method-desc
+
+Add an Annotation to the group. 
+ 
+
 .. rst-class:: trst-method-field-list
 
 :Call signature:
@@ -150,6 +159,9 @@ Methods
   add(ann): void
 :Parameters:
  :trst-parameter:`ann`
+
+ .. rst-class:: trst-parameter-desc
+ The Annotation to be added. 
 
  .. rst-class:: trst-parameter-dl
 
@@ -207,6 +219,11 @@ Gets the x2 coordinate.
 :trst-method:`setY`
 +++++++++++++++++++
 
+.. rst-class:: trst-method-desc
+
+This sets the y parameter of each Annotation present in the group. 
+ 
+
 .. rst-class:: trst-method-field-list
 
 :Call signature:
@@ -215,6 +232,9 @@ Gets the x2 coordinate.
   setY(y): void
 :Parameters:
  :trst-parameter:`y`
+
+ .. rst-class:: trst-parameter-desc
+ The y value to set. 
 
  .. rst-class:: trst-parameter-dl
 

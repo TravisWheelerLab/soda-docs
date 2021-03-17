@@ -14,6 +14,10 @@
 :trst-function:`textGlyph`
 ==========================
 
+.. rst-class:: trst-function-desc
+
+This renders a list of Annotation objects in a target chart as text glyphs. These are most likely to be used as labels that will be affixed next to another glyph.
+
 :Call signature:
  .. rst-class:: trst-call-signature
 

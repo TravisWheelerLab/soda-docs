@@ -14,6 +14,10 @@
 :trst-interface:`ViewRange`
 ===========================
 
+.. rst-class:: trst-interface-desc
+
+A simple interface that describes the current view of a visualization in terms semantic coordinates.
+
 Properties
 ----------
 
@@ -22,6 +26,10 @@ Properties
 :trst-property:`end`
 ++++++++++++++++++++
 
+.. rst-class:: trst-property-desc
+
+The end of the view. 
+ 
 .. rst-class:: trst-property-dl
 
 :Type:
@@ -32,6 +40,10 @@ Properties
 :trst-property:`start`
 ++++++++++++++++++++++
 
+.. rst-class:: trst-property-desc
+
+The start of the view. 
+ 
 .. rst-class:: trst-property-dl
 
 :Type:
@@ -42,6 +54,10 @@ Properties
 :trst-property:`width`
 ++++++++++++++++++++++
 
+.. rst-class:: trst-property-desc
+
+The width of the view. 
+ 
 .. rst-class:: trst-property-dl
 
 :Type:

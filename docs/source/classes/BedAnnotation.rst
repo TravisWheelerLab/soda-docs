@@ -16,14 +16,14 @@
 
 .. rst-class:: trst-class-desc
 
-An Annotation definition for BED records.
+An Annotation definition for BED records. For more information on BED records, see https://genome.ucsc.edu/FAQ/FAQformat.html#format1.
 
 :**Extends**:
  .. rst-class:: trst-extends
 
   :ref:`Annotation<Annotation>`
 
-**Implements**
+:**Implements**:
  .. rst-class:: trst-implements
 
   :ref:`OrientedAnnotation<OrientedAnnotation>`
@@ -70,6 +70,10 @@ A unique identifier for an Annotation object. Currently, it is up to users to ma
 :trst-property:`itemRgb`
 ++++++++++++++++++++++++
 
+.. rst-class:: trst-property-desc
+
+The color that the feature should be drawn. 
+ 
 .. rst-class:: trst-property-dl
 
 :Type:
@@ -80,6 +84,10 @@ A unique identifier for an Annotation object. Currently, it is up to users to ma
 :trst-property:`name`
 +++++++++++++++++++++
 
+.. rst-class:: trst-property-desc
+
+The name of the record. 
+ 
 .. rst-class:: trst-property-dl
 
 :Type:
@@ -92,7 +100,7 @@ A unique identifier for an Annotation object. Currently, it is up to users to ma
 
 .. rst-class:: trst-property-desc
 
-The orientation. 
+The orientation of the record. 
  
 .. rst-class:: trst-property-dl
 
@@ -104,6 +112,10 @@ The orientation.
 :trst-property:`score`
 ++++++++++++++++++++++
 
+.. rst-class:: trst-property-desc
+
+The score of the record. 
+ 
 .. rst-class:: trst-property-dl
 
 :Type:
@@ -114,6 +126,10 @@ The orientation.
 :trst-property:`thickEnd`
 +++++++++++++++++++++++++
 
+.. rst-class:: trst-property-desc
+
+The color that the feature should be drawn. 
+ 
 .. rst-class:: trst-property-dl
 
 :Type:
@@ -124,6 +140,10 @@ The orientation.
 :trst-property:`thickStart`
 +++++++++++++++++++++++++++
 
+.. rst-class:: trst-property-desc
+
+A BED field that describes at which coordinate the feature should stop being drawn "thickly." 
+ 
 .. rst-class:: trst-property-dl
 
 :Type:

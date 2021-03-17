@@ -14,6 +14,10 @@
 :trst-function:`barPlot`
 ========================
 
+.. rst-class:: trst-function-desc
+
+This renders PlotAnnotations as a bar plot.
+
 :Call signature:
  .. rst-class:: trst-call-signature
 

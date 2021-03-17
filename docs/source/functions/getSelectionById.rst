@@ -14,6 +14,10 @@
 :trst-function:`getSelectionById`
 =================================
 
+.. rst-class:: trst-function-desc
+
+This function produces a reference to D3 Selection that is mapped with the provided string id. It will throw an exception if the id is not in the internal map.
+
 :Call signature:
  .. rst-class:: trst-call-signature
 

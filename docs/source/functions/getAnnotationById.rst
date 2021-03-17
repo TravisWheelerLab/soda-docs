@@ -14,6 +14,10 @@
 :trst-function:`getAnnotationById`
 ==================================
 
+.. rst-class:: trst-function-desc
+
+This function produces a reference to Annotation object that is mapped with the provided string id. It will throw an exception if the id is not in the internal map.
+
 :Call signature:
  .. rst-class:: trst-call-signature
 

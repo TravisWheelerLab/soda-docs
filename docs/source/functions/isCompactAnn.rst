@@ -14,6 +14,10 @@
 :trst-function:`isCompactAnn`
 =============================
 
+.. rst-class:: trst-function-desc
+
+A type guard function to check whether an arbitrary Annotation object is compactable. This may not currently be entirely robust, but it should be fine to use with reasonable caution.
+
 :Call signature:
  .. rst-class:: trst-call-signature
 

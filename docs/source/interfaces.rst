@@ -13,7 +13,6 @@ Interfaces
    interfaces/BedAnnotationConfig
    interfaces/BedRecord
    interfaces/BufferedQueryParameters
-   interfaces/CharacterDatum
    interfaces/Chart
    interfaces/ChartConfig
    interfaces/ChartRenderParams
@@ -42,7 +41,6 @@ Interfaces
    interfaces/QueryParameters
    interfaces/RectangleConfig
    interfaces/ResizableChart
-   interfaces/SequenceAnnotationConfig
    interfaces/SequenceConfig
    interfaces/TextAnnotation
    interfaces/TextConfig

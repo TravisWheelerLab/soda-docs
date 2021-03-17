@@ -14,6 +14,10 @@
 :trst-function:`isBufferedQueryParameters`
 ==========================================
 
+.. rst-class:: trst-function-desc
+
+A custom type guard to check if QueryParameters are BufferedQueryParameters.
+
 :Call signature:
  .. rst-class:: trst-call-signature
 

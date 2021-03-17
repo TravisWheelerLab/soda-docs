@@ -14,6 +14,10 @@
 :trst-function:`registerZoomBehavior`
 =====================================
 
+.. rst-class:: trst-function-desc
+
+This utility function adds a ZoomBehavior to a Chart.
+
 :Call signature:
  .. rst-class:: trst-call-signature
 

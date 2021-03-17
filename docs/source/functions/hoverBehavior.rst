@@ -14,6 +14,10 @@
 :trst-function:`hoverBehavior`
 ==============================
 
+.. rst-class:: trst-function-desc
+
+Add a hover behavior to a list of glyphs.
+
 :Call signature:
  .. rst-class:: trst-call-signature
 

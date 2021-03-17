@@ -14,6 +14,10 @@
 :trst-function:`heatmap`
 ========================
 
+.. rst-class:: trst-function-desc
+
+This renders PlotAnnotations as a heatmap.
+
 :Call signature:
  .. rst-class:: trst-call-signature
 

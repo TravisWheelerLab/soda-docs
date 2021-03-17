@@ -31,6 +31,10 @@ Properties
 :trst-property:`binHeight`
 ++++++++++++++++++++++++++
 
+.. rst-class:: trst-property-desc
+
+The height in pixels of a horizontal bin in the visualization. Generally, the y coordinate of an Annotation glyph will be given in terms of which bin it should be rendered in. This defaults to a value of 10. 
+ 
 .. rst-class:: trst-property-dl
 
 :Type:
@@ -41,6 +45,10 @@ Properties
 :trst-property:`height`
 +++++++++++++++++++++++
 
+.. rst-class:: trst-property-desc
+
+The height in pixels of the Chart's SVG viewport. 
+ 
 .. rst-class:: trst-property-dl
 
 :Type:
@@ -61,6 +69,10 @@ Properties
 :trst-property:`selector`
 +++++++++++++++++++++++++
 
+.. rst-class:: trst-property-desc
+
+A string that can be used to uniquely select the target DOM container via d3.select(). 
+ 
 .. rst-class:: trst-property-dl
 
 :Type:
@@ -81,6 +93,10 @@ Properties
 :trst-property:`verticalPad`
 ++++++++++++++++++++++++++++
 
+.. rst-class:: trst-property-desc
+
+The height in pixels with which to pad the top and bottom of the SVG viewport with empty space. 
+ 
 .. rst-class:: trst-property-dl
 
 :Type:
@@ -91,6 +107,10 @@ Properties
 :trst-property:`width`
 ++++++++++++++++++++++
 
+.. rst-class:: trst-property-desc
+
+The height in pixels of the Chart's SVG viewport. 
+ 
 .. rst-class:: trst-property-dl
 
 :Type:

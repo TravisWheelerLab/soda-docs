@@ -14,6 +14,10 @@
 :trst-function:`verticalLineGlyph`
 ==================================
 
+.. rst-class:: trst-function-desc
+
+This renders a list of Annotation objects in a target chart as vertical lines.
+
 :Call signature:
  .. rst-class:: trst-call-signature
 

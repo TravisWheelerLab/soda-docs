@@ -23,7 +23,7 @@ An Annotation definition for GFF3 records.
 
   :ref:`Annotation<Annotation>`
 
-**Implements**
+:**Implements**:
  .. rst-class:: trst-implements
 
   :ref:`OrientedAnnotation<OrientedAnnotation>`

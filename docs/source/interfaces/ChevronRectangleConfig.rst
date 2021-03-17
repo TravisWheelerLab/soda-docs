@@ -21,8 +21,7 @@ An interface that holds the parameters for rendering and configuring a chevron r
 :**Extends**:
  .. rst-class:: trst-extends
 
-  :ref:`ChevronPrimitiveConfig<ChevronPrimitiveConfig>`
-, :ref:`RectangleConfig<RectangleConfig>`
+  :ref:`ChevronPrimitiveConfig<ChevronPrimitiveConfig>` :ref:`RectangleConfig<RectangleConfig>`
 
 :Type parameters:
  :trst-type-parameter:`A`

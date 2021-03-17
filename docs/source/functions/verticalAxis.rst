@@ -14,6 +14,10 @@
 :trst-function:`verticalAxis`
 =============================
 
+.. rst-class:: trst-function-desc
+
+This renders Annotations as vertical axes in a chart. This is intended to be used in conjunction with one of the plotting glyph modules. The vertical axes can be fixed in place, but they are configured to move during zoom events by default.
+
 :Call signature:
  .. rst-class:: trst-call-signature
 

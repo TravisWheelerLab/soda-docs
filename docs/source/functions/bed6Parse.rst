@@ -14,12 +14,19 @@
 :trst-function:`bed6Parse`
 ==========================
 
+.. rst-class:: trst-function-desc
+
+A function that explicitly parses a BED6 object from a string of BED records.
+
 :Call signature:
  .. rst-class:: trst-call-signature
 
   bed6Parse(lines): None
 :Parameters:
  :trst-parameter:`lines`
+
+ .. rst-class:: trst-parameter-desc
+ The BED records, newline separated. 
 
  .. rst-class:: trst-parameter-dl
 

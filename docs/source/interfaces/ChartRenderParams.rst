@@ -26,6 +26,10 @@ Properties
 :trst-property:`queryEnd`
 +++++++++++++++++++++++++
 
+.. rst-class:: trst-property-desc
+
+The end coordinate of the region that will be rendered. 
+ 
 .. rst-class:: trst-property-dl
 
 :Type:
@@ -36,6 +40,10 @@ Properties
 :trst-property:`queryStart`
 +++++++++++++++++++++++++++
 
+.. rst-class:: trst-property-desc
+
+The start coordinate of the region that will be rendered. 
+ 
 .. rst-class:: trst-property-dl
 
 :Type:

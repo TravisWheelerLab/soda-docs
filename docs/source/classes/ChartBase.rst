@@ -18,7 +18,7 @@
 
 This is an abstract class that provides some default implementations for Charts. It basically just handles creating and keeping track of an SVG viewport in the DOM, creating a d3 scale that is used to translate between semantic coordinates and viewport coordinates, and provides some utility methods to get information about the dimensions of a Chart's container in the DOM.
 
-**Implements**
+:**Implements**:
  .. rst-class:: trst-implements
 
   :ref:`Chart<Chart>`

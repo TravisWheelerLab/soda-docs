@@ -17,7 +17,6 @@ Functions
    functions/defaultTooltipMouseover
    functions/forwardChevronLine
    functions/forwardChevronRectangleGlyph
-   functions/getAllIds
    functions/getAnnotationById
    functions/getSelectionById
    functions/gff3ParseFlat

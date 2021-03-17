@@ -14,6 +14,10 @@
 :trst-function:`mapIdToSelection`
 =================================
 
+.. rst-class:: trst-function-desc
+
+This function stores a reference to a D3 selection to an Annotation glyph in an internal map that is keyed by a unique string id.
+
 :Call signature:
  .. rst-class:: trst-call-signature
 

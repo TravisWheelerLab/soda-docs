@@ -14,6 +14,10 @@
 :trst-function:`lineGlyph`
 ==========================
 
+.. rst-class:: trst-function-desc
+
+This renders a list of Annotation objects in a target chart as lines.
+
 :Call signature:
  .. rst-class:: trst-call-signature
 

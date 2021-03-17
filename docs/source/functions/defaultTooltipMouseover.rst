@@ -14,6 +14,10 @@
 :trst-function:`defaultTooltipMouseover`
 ========================================
 
+.. rst-class:: trst-function-desc
+
+The default tooltip mouseover callback function. It moves the tooltip div to the appropriate spot and then uses the config to style the tooltip.
+
 :Call signature:
  .. rst-class:: trst-call-signature
 

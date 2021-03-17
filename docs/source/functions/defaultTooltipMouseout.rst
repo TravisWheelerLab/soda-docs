@@ -14,6 +14,10 @@
 :trst-function:`defaultTooltipMouseout`
 =======================================
 
+.. rst-class:: trst-function-desc
+
+The default tooltip mouseout callback function. It just moves the tooltip div out of the way, shrinks it, and makes it invisible.
+
 :Call signature:
  .. rst-class:: trst-call-signature
 

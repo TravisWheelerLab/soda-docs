@@ -14,6 +14,10 @@
 :trst-interface:`QueryControllerConfig`
 =======================================
 
+.. rst-class:: trst-interface-desc
+
+A simple interface that holds the arguments for a QueryController constructor.
+
 :Type parameters:
  :trst-type-parameter:`Q`
 
@@ -46,6 +50,10 @@ A callback function that can produce a new QuerySignature given the previous que
 :trst-property:`widthThresholds`
 ++++++++++++++++++++++++++++++++
 
+.. rst-class:: trst-property-desc
+
+A list of query width thresholds at which to switch renderCallbacks. 
+ 
 .. rst-class:: trst-property-dl
 
 :Type:

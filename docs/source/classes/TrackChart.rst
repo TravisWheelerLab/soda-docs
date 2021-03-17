@@ -23,11 +23,10 @@ This is an extended Chart class that was designed to fit the basic needs of a "t
 
   :ref:`ChartBase<ChartBase>`
 
-**Implements**
+:**Implements**:
  .. rst-class:: trst-implements
 
-  :ref:`ResizableChart<ResizableChart>`
-, :ref:`ZoomableChart<ZoomableChart>`
+  :ref:`ResizableChart<ResizableChart>`, :ref:`ZoomableChart<ZoomableChart>`
 
 Constructor
 -----------

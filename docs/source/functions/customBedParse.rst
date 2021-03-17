@@ -14,12 +14,19 @@
 :trst-function:`customBedParse`
 ===============================
 
+.. rst-class:: trst-function-desc
+
+A function that uses a custom parsing callback function to parse a string of BED records into an arbitrary type of Annotation objects.
+
 :Call signature:
  .. rst-class:: trst-call-signature
 
   customBedParse<A>(lines, parseCallback): None
 :Type parameters:
  :trst-type-parameter:`A`
+
+ .. rst-class:: trst-type-parameter-desc
+ The Annotation type that this function will return. 
 
  .. rst-class:: trst-type-parameter-dl
 
@@ -31,6 +38,9 @@
 :Parameters:
  :trst-parameter:`lines`
 
+ .. rst-class:: trst-parameter-desc
+ The BED records, newline separated.
+
  .. rst-class:: trst-parameter-dl
 
    :Type:
@@ -39,6 +49,9 @@
      string
    
  :trst-parameter:`parseCallback`
+
+ .. rst-class:: trst-parameter-desc
+ The callback function that defines how to transform a BedRecord object into an Annotation object.
 
  .. rst-class:: trst-parameter-dl
 

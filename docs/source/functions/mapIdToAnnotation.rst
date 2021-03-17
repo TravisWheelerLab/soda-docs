@@ -14,6 +14,10 @@
 :trst-function:`mapIdToAnnotation`
 ==================================
 
+.. rst-class:: trst-function-desc
+
+This function stores a reference to an Annotation object in an internal map that is keyed by string id's. By default, the SODA rendering module will call this function to map each rendered Annotation with its id property.
+
 :Call signature:
  .. rst-class:: trst-call-signature
 

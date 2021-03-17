@@ -14,6 +14,10 @@
 :trst-function:`linePlot`
 =========================
 
+.. rst-class:: trst-function-desc
+
+This renders PlotAnnotations as a line plot.
+
 :Call signature:
  .. rst-class:: trst-call-signature
 

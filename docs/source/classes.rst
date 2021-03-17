@@ -19,7 +19,6 @@ Classes
    classes/QueryController
    classes/ResizeController
    classes/RuleController
-   classes/SequenceAnnotation
    classes/TrackChart
    classes/TrackRack
    classes/ZoomController

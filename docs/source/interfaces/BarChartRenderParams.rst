@@ -31,6 +31,10 @@ Properties
 :trst-property:`data`
 +++++++++++++++++++++
 
+.. rst-class:: trst-property-desc
+
+The data that will be plotted. 
+ 
 .. rst-class:: trst-property-dl
 
 :Type:

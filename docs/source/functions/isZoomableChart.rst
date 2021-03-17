@@ -14,6 +14,10 @@
 :trst-function:`isZoomableChart`
 ================================
 
+.. rst-class:: trst-function-desc
+
+A custom type guard to check if an arbitrary chart is a ZoomableChart. This is currently not a very strict guard, and it should be used with caution.
+
 :Call signature:
  .. rst-class:: trst-call-signature
 
