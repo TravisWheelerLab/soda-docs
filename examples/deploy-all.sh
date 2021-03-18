@@ -2,6 +2,6 @@
 
 for d in */ ; do
     if [ "$d" != 'node_modules/' ]; then
-        ./deploy $d;
+        ./deploy.sh $d;
     fi
 done
