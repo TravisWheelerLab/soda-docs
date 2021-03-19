@@ -9,7 +9,7 @@ This is the usage guide for SODA. Here, you will find descriptions of the core f
  - :ref:`guide-introduction` - A brief introduction to SODA
  - :Ref:`guide-quickstart` - Where to go if you *really* don't want to read any of the guide
  - :ref:`guide-installation` - What steps you'll need to take to install SODA
- - :ref:`guide-concepts` - An introduction to the main concepts
+ - :ref:`guide-overview` - An introduction to the way things work in SODA
  - :ref:`guide-simple-examples` - A set of simple, toy example SODA applications in tutorial format
  - :ref:`guide-practical-examples` - A set of complex, practical example SODA applications in tutorial format
 
@@ -20,6 +20,6 @@ This is the usage guide for SODA. Here, you will find descriptions of the core f
     guide/introduction
     guide/quickstart
     guide/installation
-    guide/concepts
+    guide/overview
     guide/simple-examples
     guide/practical-examples

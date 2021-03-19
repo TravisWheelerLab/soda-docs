@@ -6,9 +6,9 @@ Installation and setup
 SODA is implemented in TypeScript and should be used in the context of either a TypeScript (preferably) or JavaScript (at your own peril) project.
 The easiest way to use SODA is within an npm_ project.
 
-If you have never used npm before, you'll first need to install node_.
+If you have never used npm before, you'll first need to install Node_.
 Depending on your operating system, there may be several ways to do that.
-Regardless of which platform you are on, you should be able to install it from the `node homepage`__
+Regardless of which platform you are on, you should be able to install it from the `Node homepage`__
 
 Alternatively, you could install node with the package manager of your choice.
 
@@ -47,6 +47,6 @@ Once you have an npm project, brand new or otherwise, you can install SODA:
 If you want to, you can instead download the SODA source code from the GitHub repository_.
 
 .. _npm: https://www.npmjs.com/
-.. _node: https://nodejs.org/en/
+.. _Node: https://nodejs.org/en/
 .. _repository: https://github.com/TravisWheelerLab/soda.
 __ node_

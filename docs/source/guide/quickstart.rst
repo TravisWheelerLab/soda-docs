@@ -3,10 +3,12 @@
 Quickstart
 ==========
 
-If you want to jump right into SODA code, you'd probably be best off viewing and running some of the examples_.
+If you want to jump right into SODA code, you'd probably be best off viewing and running some of the simple examples_.
 All you'll need to do is install npm_, clone the repository, and install the dependencies.
 
-If you'd like to take a look at some more complicated code, you can check out one the practical SODA applications:
+If you want to take it just a hair slower, head to the :ref:`simple examples tutorial<guide-simple-examples>`, which discusses the implementation of each of the simple examples in detail.
+
+If you'd like to take a look at some more complicated code, you can check out one of the practical SODA applications:
 
 - RepeatMasker-soda_
 - Dfam-soda_

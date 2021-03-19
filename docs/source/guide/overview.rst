@@ -1,7 +1,7 @@
-.. _guide-concepts:
+.. _guide-overview:
 
-Core SODA concepts
-==================
+Overview
+========
 
 Soon\ :sup:`TM`
 
@@ -16,6 +16,9 @@ Inverted rendering pattern
 
 Canonical rendering pattern
 ---------------------------
+
+Layout
+------
 
 Dynamic behavior
 ----------------
