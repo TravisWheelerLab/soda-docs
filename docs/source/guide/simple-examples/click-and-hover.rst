@@ -1,3 +1,5 @@
+.. _simple-examples-click-and-hover:
+
 Click and hover behaviors
 =========================
 This example showcases click and hover behaviors in SODA.

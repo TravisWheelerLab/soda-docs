@@ -1,4 +1,4 @@
-.. _drawing-plots:
+.. _simple-examples-plots:
 
 Drawing plots
 =============

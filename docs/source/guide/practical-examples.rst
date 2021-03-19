@@ -3,3 +3,4 @@
 Practical examples
 =================
 
+Soon\ :sup:`TM`

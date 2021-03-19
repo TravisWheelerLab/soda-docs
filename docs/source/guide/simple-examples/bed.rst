@@ -1,4 +1,4 @@
-.. _bed-data:
+.. _simple-examples-bed:
 
 Rendering BED data
 ==================

@@ -1,4 +1,4 @@
-.. _gff3-data:
+.. _simple-examples-gff3:
 
 Rendering GFF3 data
 ===================

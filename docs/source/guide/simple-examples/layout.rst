@@ -1,4 +1,4 @@
-.. _layout-module:
+.. _simple-examples-layout:
 
 Using the layout module
 =======================

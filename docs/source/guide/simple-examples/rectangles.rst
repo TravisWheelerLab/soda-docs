@@ -1,4 +1,4 @@
-.. _drawing-rectangles:
+.. _simple-examples-rectangles:
 
 Drawing rectangles
 ==================
