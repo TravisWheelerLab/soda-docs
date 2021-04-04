@@ -3,8 +3,6 @@
 Overview
 ========
 
-Soon\ :sup:`TM`
-
 Annotation objects
 ------------------
 
