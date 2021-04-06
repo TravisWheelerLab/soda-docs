@@ -13,12 +13,11 @@ SODA is still in the early stages of its development and is currently maintained
 The SODA project adheres to the `semantic versioning`_ guidelines, so any (intentional) breaking changes to the API will be accompanied by a bump in the major version number.
 Be advised that for the foreseeable future, updates to the library may be infrequent and the API will likely change considerably.
 
-In a perfect world, the SODA versioning would have began in the 0.x.y range, but due to the initial developer's unfamiliarity with releasing software, it began at 1.0.0.
-Rather than try to rewrite history, we have elected to move forward with the library versioning as is.
+In a perfect world, the SODA versioning would have began in the 0.x.y range, but the first build was inadvertently uploaded to npm at version 1.0.0.
+Since npm has strict policies regarding both removing packages (`for good reasons`_) and rewriting version history, we have elected to move forward with the library versioning as is.
 To make things a bit more complicated, we consider version 1.3.0 to be the first public release, which was tagged to accompany the initial submission of the SODA publication (currently in the process of review).
 For all versions prior to 1.3.0, the API is lightly documented inline in the source code.
 Our intention is to reach the level of API stability that would typically be associated with a software 1.0 release by the time that SODA reaches version 2.0
-
 
 Design philosophies
 -------------------
@@ -65,6 +64,7 @@ The only assumption that SODA makes about your data is that it lives inside a on
 Where possible, SODA modules aim to be independent from one another, so that each can be used without conflict or some form of dependence.
 As new features emerge, it is often easier to develop them in a way that violates this philosophy, but the goal is for this to become much less common (or even disappear entirely) as the library reaches maturity.
 
+.. _for good reasons: https://qz.com/646467/how-one-programmer-broke-the-internet-by-deleting-a-tiny-piece-of-code/
 .. _semantic versioning: https://semver.org/
 .. _TypeScript handbook: https://www.typescriptlang.org/docs/handbook/intro.html
 .. _generics: https://www.typescriptlang.org/docs/handbook/2/generics.html
