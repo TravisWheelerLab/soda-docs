@@ -1,5 +1,0 @@
-.. _hover:
-
-Hover behaviors
-===============
-

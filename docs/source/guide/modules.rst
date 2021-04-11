@@ -16,8 +16,7 @@ The following SODA modules provide a set of features that simplify and augment t
 - :ref:`Resizing<resize>` - a simple way to handle Chart response to browser resize events
 - :ref:`Query management<query>` - a framework that helps manage data queries and the use of their responses to render glyphs
 - :ref:`Multi-track management<track-rack>` - a framework that helps manage multi-track visualizations
-- :ref:`Click behaviors<click>` - define the behavior executed when glyphs are clicked
-- :ref:`Hover behaviors<hover>` - define the behavior executed when glyphs are hovered
+- :ref:`Click and hover behaviors<click-and-hover>` - define the behavior executed when glyphs are clicked or hovered
 - :ref:`Brush behaviors<brush>` - define the behavior executed when a brush selection is made in a chart
 
 .. toctree::
@@ -31,6 +30,5 @@ The following SODA modules provide a set of features that simplify and augment t
     modules/resize
     modules/query
     modules/track-rack
-    modules/click
-    modules/hover
+    modules/click-and-hover
     modules/brush
