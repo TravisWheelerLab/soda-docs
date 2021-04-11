@@ -1,0 +1,4 @@
+.. _click:
+
+Click behaviors
+===============

@@ -1,0 +1,5 @@
+.. _brush:
+
+Brush behaviors
+===============
+

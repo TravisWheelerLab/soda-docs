@@ -16,6 +16,14 @@ Annotation objects are rendered as glyphs inside of Chart objects, which are lar
 SODA provides an abstract base Chart class, along with some functional extended charts for common visualization patterns.
 For heavily customized visualizations, developers should implement an extension of a Chart class.
 
+The charts provided by SODA are:
+
+- :ref:`TrackChart`
+- :ref:`AxisChart`
+- :ref:`BarChart`
+- :ref:`LineChart`
+- :ref:`HeatmapChart`
+
 Glyph Rendering
 ---------------
 In a SODA visualization, Annotation objects are passed to the rendering module to render SVG glyphs inside of a Chart.
