@@ -7,12 +7,32 @@ body {
 
 .wy-grid-for-nav, .wy-nav-side {
   overflow-y: scroll;
+  top: 145px;
+  height: calc(100% - 145px);
+}
+
+.disclaimer {
+  background: #fcfcfc;
+  width: auto;
   top: 100px;
-  height: calc(100% - 100px);
+  height: 45px;
+  padding: 8px;
+  z-index: 200;
+  position: fixed;
+  overflow: hidden;
+}
+.disclaimer .warning {
+  border-radius: 3px;
+  padding: 4px 12px 4px 12px;
+  font-size: 18px;
+  color: white;
+  background: #f0b37e;
+  height: auto;
+  margin: 0;
 }
 
 .topnav {
-  background: white;
+  background: #fcfcfc;
   width: 100%;
   height: 100px;
   padding: 8px;

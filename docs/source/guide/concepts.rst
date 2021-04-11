@@ -21,4 +21,3 @@ Glyph Rendering
 In a SODA visualization, Annotation objects are passed to the rendering module to render SVG glyphs inside of a Chart.
 Annotations can be rendered as rectangles, lines, arrows, text, bar plots, line plots, or heatmaps.
 Glyph style attributes are defined with callback functions that implicitly receive references to the represented Annotation object and the target Chart.
-

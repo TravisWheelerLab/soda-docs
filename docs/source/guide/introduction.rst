@@ -10,6 +10,8 @@ Before you start
 ----------------
 
 SODA is still in the early stages of its development and is currently maintained by one person.
+As such, you may find yourself thinking that there are obvious (and sometimes seemingly trivial to implement) gaps in the feature set.
+
 The SODA project adheres to the `semantic versioning`_ guidelines, so any (intentional) breaking changes to the API will be accompanied by a bump in the major version number.
 Be advised that for the foreseeable future, updates to the library may be infrequent and the API will likely change considerably.
 
