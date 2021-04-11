@@ -1,6 +1,7 @@
 .. _guide-practical-examples:
 
 Practical examples
-=================
+==================
 
-Soon\ :sup:`TM`
+.. note::
+    This section will be completed in the future.
