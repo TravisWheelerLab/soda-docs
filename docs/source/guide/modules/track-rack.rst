@@ -8,11 +8,11 @@ You'll notice that this is quite similar to using a :ref:`QueryController`, whic
 
 To make use of the module, you'll need to:
 
-- instantiate a :ref:`TrackRack` object
-- register one or more charts with it
-- provide a set of view width thresholds at which rendering will change
-- provide rendering callback functions that accompany the width thresholds
-- provide a :ref:`QueryBuilder` callback function, which defines how to build a new data query from the one that was previously used
+- Instantiate a :ref:`TrackRack` object
+- Register one or more charts with it
+- Provide a set of view width thresholds at which rendering will change
+- Provide rendering callback functions that accompany the width thresholds
+- Provide a :ref:`QueryBuilder` callback function, which defines how to build a new data query from the one that was previously used
 
 The TrackRack is one of the more recent SODA features, and it still needs refinement and proper example/tutorial.
 

@@ -4,7 +4,6 @@ Modules
 =======
 
 .. warning::
-    The development of these feature modules has been driven by our internal use cases at the Wheeler lab.
     This part of the API is the most likely to change.
 
 The following SODA modules provide a set of features that simplify and augment the process of rendering glyphs:
