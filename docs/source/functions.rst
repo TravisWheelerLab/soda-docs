@@ -7,6 +7,7 @@ Functions
    functions/axisRenderCallback
    functions/barPlot
    functions/bed6Parse
+   functions/brushXBehavior
    functions/chevronLineGlyph
    functions/chevronPatternId
    functions/chevronRectangleGlyph
@@ -17,6 +18,7 @@ Functions
    functions/defaultTooltipMouseover
    functions/forwardChevronLine
    functions/forwardChevronRectangleGlyph
+   functions/getAllAnnotationIds
    functions/getAnnotationById
    functions/getSelectionById
    functions/gff3ParseFlat
@@ -34,6 +36,7 @@ Functions
    functions/linePlot
    functions/mapIdToAnnotation
    functions/mapIdToSelection
+   functions/queryOk
    functions/rectangleGlyph
    functions/registerZoomBehavior
    functions/reverseChevronLine

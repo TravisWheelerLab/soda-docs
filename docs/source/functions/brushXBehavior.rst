@@ -9,19 +9,19 @@
 .. role:: trst-type
 .. role:: trst-type-parameter
 
-.. _sequenceGlyph:
+.. _brushXBehavior:
 
-:trst-function:`sequenceGlyph`
-==============================
+:trst-function:`brushXBehavior`
+===============================
 
 .. rst-class:: trst-function-desc
 
-An experimental function that renders a list of Annotation objects in a target chart as sequence glyphs. In a sequence glyph, each integer semantic coordinate that the Annotation covers is rendered as a character. This works, but it is very hard on performance.
+Add a brushX behavior to a chart.
 
 :Call signature:
  .. rst-class:: trst-call-signature
 
-  sequenceGlyph<A, C>(chart, ann, conf): void
+  brushXBehavior<A, C>(chart, config): void
 :Type parameters:
  :trst-type-parameter:`A`
 
@@ -30,7 +30,7 @@ An experimental function that renders a list of Annotation objects in a target c
    :Type constraint:
     .. rst-class:: trst-type-constraint
    
-     A extends :ref:`SequenceAnnotation<SequenceAnnotation>` <:ref:`A<A>`>
+     A extends :ref:`Annotation<Annotation>` <:ref:`A<A>`>
    
 :Type parameters:
  :trst-type-parameter:`C`
@@ -46,7 +46,7 @@ An experimental function that renders a list of Annotation objects in a target c
  :trst-parameter:`chart`
 
  .. rst-class:: trst-parameter-desc
- Empty comment
+ The Chart to add the behavior to.
 
  .. rst-class:: trst-parameter-dl
 
@@ -55,27 +55,15 @@ An experimental function that renders a list of Annotation objects in a target c
    
      :ref:`C<C>`
    
- :trst-parameter:`ann`
+ :trst-parameter:`config`
 
  .. rst-class:: trst-parameter-desc
- Empty comment
+ The configuration of the behavior. 
 
  .. rst-class:: trst-parameter-dl
 
    :Type:
     .. rst-class:: trst-type
    
-     :ref:`A<A>` []
-   
- :trst-parameter:`conf`
-
- .. rst-class:: trst-parameter-desc
-  
-
- .. rst-class:: trst-parameter-dl
-
-   :Type:
-    .. rst-class:: trst-type
-   
-     :ref:`SequenceConfig<SequenceConfig>` <:ref:`A<A>`, :ref:`C<C>`>
+     :ref:`BrushXConfig<BrushXConfig>` <:ref:`A<A>`, :ref:`C<C>`>
    
