@@ -119,7 +119,7 @@ A callback to define the stroke color of the border around the rectangle glyph.
 
 .. rst-class:: trst-property-desc
 
-A callback to define the opacity of the border around the rectangle glyph. 
+A callback to define the stroke width of the border around the rectangle glyph. 
  
 .. rst-class:: trst-property-dl
 

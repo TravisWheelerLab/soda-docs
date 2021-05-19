@@ -48,48 +48,6 @@ Properties
 
 ----
 
-:trst-property:`backgroundColor`
-++++++++++++++++++++++++++++++++
-
-.. rst-class:: trst-property-desc
-
-A callback to define the color of the background behind the text. 
- 
-.. rst-class:: trst-property-dl
-
-:Type:
- .. rst-class:: trst-type
-
-  undefined | (d: CharacterDatum, c: C): string
-
-:trst-property:`backgroundOpacity`
-++++++++++++++++++++++++++++++++++
-
-.. rst-class:: trst-property-desc
-
-A callback to define the opacity of the background behind the text. 
- 
-.. rst-class:: trst-property-dl
-
-:Type:
- .. rst-class:: trst-type
-
-  undefined | (d: CharacterDatum, c: C): string
-
-:trst-property:`characterX`
-+++++++++++++++++++++++++++
-
-.. rst-class:: trst-property-desc
-
-A callback to define the x coordinate of each character in the sequence glyph. 
- 
-.. rst-class:: trst-property-dl
-
-:Type:
- .. rst-class:: trst-type
-
-  undefined | (d: CharacterDatum, c: C): number
-
 :trst-property:`selector`
 +++++++++++++++++++++++++
 
@@ -100,33 +58,33 @@ A callback to define the x coordinate of each character in the sequence glyph.
 
   string
 
-:trst-property:`strokeColor`
-++++++++++++++++++++++++++++
+:trst-property:`w`
+++++++++++++++++++
 
 .. rst-class:: trst-property-desc
 
-A callback to define the stroke color of the text. 
+A callback to define the semantic width coordinate of the sequence glyph. 
  
 .. rst-class:: trst-property-dl
 
 :Type:
  .. rst-class:: trst-type
 
-  undefined | (d: CharacterDatum, c: C): string
+  (a: A, c: C): number
 
-:trst-property:`strokeOpacity`
-++++++++++++++++++++++++++++++
+:trst-property:`x`
+++++++++++++++++++
 
 .. rst-class:: trst-property-desc
 
-A callback to define the stroke opacity of the text. 
+A callback to define the semantic x coordinate of the sequence glyph. 
  
 .. rst-class:: trst-property-dl
 
 :Type:
  .. rst-class:: trst-type
 
-  undefined | (d: CharacterDatum, c: C): number
+  (a: A, c: C): number
 
 :trst-property:`y`
 ++++++++++++++++++
@@ -140,4 +98,4 @@ A callback to define the y coordinate of the sequence glyph.
 :Type:
  .. rst-class:: trst-type
 
-  undefined | (a: A, c: C): number
+  (a: A, c: C): number

@@ -323,16 +323,6 @@ This configures the SVG viewport to appropriately handle browser zoom events. It
 
   configureZoom(): void
 
-:trst-method:`disableZoom`
-++++++++++++++++++++++++++
-
-.. rst-class:: trst-method-field-list
-
-:Call signature:
- .. rst-class:: trst-call-signature
-
-  disableZoom(): void
-
 :trst-method:`getContainerDimensions`
 +++++++++++++++++++++++++++++++++++++
 
