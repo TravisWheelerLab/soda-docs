@@ -48,6 +48,48 @@ Properties
 
 ----
 
+:trst-property:`backgroundColor`
+++++++++++++++++++++++++++++++++
+
+.. rst-class:: trst-property-desc
+
+A callback to define the color of the background behind the text. 
+ 
+.. rst-class:: trst-property-dl
+
+:Type:
+ .. rst-class:: trst-type
+
+  undefined | (d: CharacterDatum, c: C): string
+
+:trst-property:`backgroundOpacity`
+++++++++++++++++++++++++++++++++++
+
+.. rst-class:: trst-property-desc
+
+A callback to define the opacity of the background behind the text. 
+ 
+.. rst-class:: trst-property-dl
+
+:Type:
+ .. rst-class:: trst-type
+
+  undefined | (d: CharacterDatum, c: C): string
+
+:trst-property:`characterX`
++++++++++++++++++++++++++++
+
+.. rst-class:: trst-property-desc
+
+A callback to define the x coordinate of each character in the sequence glyph. 
+ 
+.. rst-class:: trst-property-dl
+
+:Type:
+ .. rst-class:: trst-type
+
+  undefined | (d: CharacterDatum, c: C): number
+
 :trst-property:`selector`
 +++++++++++++++++++++++++
 
@@ -58,33 +100,33 @@ Properties
 
   string
 
-:trst-property:`w`
-++++++++++++++++++
+:trst-property:`strokeColor`
+++++++++++++++++++++++++++++
 
 .. rst-class:: trst-property-desc
 
-A callback to define the semantic width coordinate of the sequence glyph. 
+A callback to define the stroke color of the text. 
  
 .. rst-class:: trst-property-dl
 
 :Type:
  .. rst-class:: trst-type
 
-  (a: A, c: C): number
+  undefined | (d: CharacterDatum, c: C): string
 
-:trst-property:`x`
-++++++++++++++++++
+:trst-property:`strokeOpacity`
+++++++++++++++++++++++++++++++
 
 .. rst-class:: trst-property-desc
 
-A callback to define the semantic x coordinate of the sequence glyph. 
+A callback to define the stroke opacity of the text. 
  
 .. rst-class:: trst-property-dl
 
 :Type:
  .. rst-class:: trst-type
 
-  (a: A, c: C): number
+  undefined | (d: CharacterDatum, c: C): number
 
 :trst-property:`y`
 ++++++++++++++++++
@@ -98,4 +140,4 @@ A callback to define the y coordinate of the sequence glyph.
 :Type:
  .. rst-class:: trst-type
 
-  (a: A, c: C): number
+  undefined | (a: A, c: C): number

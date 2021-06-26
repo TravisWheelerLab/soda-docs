@@ -21,7 +21,7 @@ An experimental function that renders a list of Annotation objects in a target c
 :Call signature:
  .. rst-class:: trst-call-signature
 
-  sequenceGlyph<A, D, C>(chart, ann, conf): void
+  sequenceGlyph<A, C>(chart, ann, conf): void
 :Type parameters:
  :trst-type-parameter:`A`
 
@@ -31,16 +31,6 @@ An experimental function that renders a list of Annotation objects in a target c
     .. rst-class:: trst-type-constraint
    
      A extends :ref:`SequenceAnnotation<SequenceAnnotation>` <:ref:`A<A>`>
-   
-:Type parameters:
- :trst-type-parameter:`D`
-
- .. rst-class:: trst-type-parameter-dl
-
-   :Type constraint:
-    .. rst-class:: trst-type-constraint
-   
-     D extends :ref:`CharacterDatum<CharacterDatum>`
    
 :Type parameters:
  :trst-type-parameter:`C`
